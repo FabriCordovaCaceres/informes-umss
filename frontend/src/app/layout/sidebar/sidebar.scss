@@ -1,0 +1,122 @@
+aside {
+  position: fixed;
+  inset: 0 auto 0 0;
+  width: 250px;
+  background: #102b4c;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  z-index: 30;
+  border-top: 4px solid #a52f40;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 32px 24px 25px;
+  color: white;
+  text-decoration: none;
+}
+.brand strong {
+  font:
+    700 30px Georgia,
+    serif;
+  letter-spacing: 3px;
+}
+.brand small {
+  display: block;
+  font-size: 8px;
+  letter-spacing: 1.2px;
+  line-height: 1.7;
+  margin-top: 5px;
+}
+.seal {
+  border: 1px solid #c9ad74;
+  border-radius: 50%;
+  height: 53px;
+  width: 53px;
+  display: grid;
+  place-items: center;
+  color: #e4c990;
+}
+.seal app-icon {
+  width: 32px;
+  height: 32px;
+}
+.division {
+  margin: 0 24px;
+  padding: 22px 0;
+  border-top: 1px solid #ffffff20;
+  border-bottom: 1px solid #ffffff20;
+}
+.division span {
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #c3d1e0;
+}
+.division p {
+  font-size: 12px;
+  line-height: 1.5;
+  margin: 7px 0 0;
+  color: #cbd5e1;
+}
+.nav-label {
+  font-size: 9px;
+  letter-spacing: 1.4px;
+  color: #90a5bf;
+  margin: 29px 25px 12px;
+}
+nav {
+  padding: 0 12px;
+}
+nav a {
+  padding: 14px 13px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  font-size: 12px;
+  color: #c7d3e1;
+  border-radius: 4px;
+  margin-bottom: 5px;
+  text-decoration: none;
+  border-left: 3px solid transparent;
+}
+nav a.active {
+  background: #ffffff12;
+  color: #fff;
+  border-left-color: #c24651;
+}
+nav a:hover {
+  background: #ffffff0d;
+}
+.sidebar-foot {
+  margin-top: auto;
+  padding: 25px;
+  font-size: 11px;
+  color: #c8d4e1;
+}
+.sidebar-foot div {
+  border-top: 1px solid #ffffff20;
+  margin-top: 16px;
+  padding-top: 16px;
+  font-size: 10px;
+  line-height: 1.8;
+  color: #91a5bd;
+}
+.local-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: #81b798;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+@media (max-width: 1000px) {
+  aside {
+    transform: translateX(-100%);
+    transition: transform 0.2s;
+  }
+  aside.open {
+    transform: translateX(0);
+  }
+}

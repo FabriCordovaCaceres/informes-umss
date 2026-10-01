@@ -1,0 +1,408 @@
+<div class="page-heading">
+  <div>
+    <span class="eyebrow">ELABORACIÓN DE DOCUMENTOS</span>
+    <h1>{{ id ? 'Editar informe' : 'Nuevo informe técnico' }}</h1>
+    <p>{{ code() }}</p>
+  </div>
+  <button type="button" class="secondary" (click)="back()">Volver al registro</button>
+</div>
+@if (leaveBlocked()) {
+  <div class="message error" role="alert">
+    Tiene cambios sin guardar. Guarde el borrador para conservarlos o descarte los cambios.
+    <div class="form-actions">
+      <button type="button" class="secondary" (click)="leaveBlocked.set(false)">
+        Continuar editando</button
+      ><button type="button" class="danger-button" (click)="discard()">Descartar y salir</button>
+    </div>
+  </div>
+}
+@if (error()) {
+  <div class="message error" role="alert">{{ error() }}</div>
+}
+@if (success()) {
+  <div class="message success" role="status">{{ success() }}</div>
+}
+<div class="steps" aria-label="Pasos del informe">
+  @for (label of ['Datos generales', 'Áreas y materiales', 'Vista previa']; track $index) {
+    <button
+      type="button"
+      [class.active]="step() === $index + 1"
+      [class.complete]="step() > $index + 1"
+      (click)="go($index + 1)"
+      [disabled]="loading() || busy()"
+    >
+      <span>{{ $index + 1 }}</span
+      >{{ label }}
+    </button>
+  }
+</div>
+@if (loading()) {
+  <div class="loading panel">Cargando datos del informe…</div>
+} @else {
+  <form [formGroup]="form" (ngSubmit)="save()">
+    @if (step() === 1) {
+      <div class="panel">
+        <section class="form-section">
+          <h2>Datos generales</h2>
+          <p class="hint">
+            {{ numberHint() || 'El número del informe está reservado para esta gestión.' }}
+          </p>
+          <div class="form-grid">
+            <label>N.º informe<input [value]="code()" readonly /></label
+            ><label>Fecha *<input formControlName="fecha" type="date" /></label
+            ><label
+              >De *<input
+                formControlName="remitente"
+                placeholder="Nombre completo del técnico" /></label
+            ><label>Cargo<input formControlName="cargo_remitente" /></label
+            ><label>Para *<input formControlName="destinatario" /></label
+            ><label>Cargo del destinatario<input formControlName="cargo_destinatario" /></label
+            ><label class="full"
+              >Referencia *<input
+                formControlName="referencia"
+                placeholder="Pedido material ampliación puntos de red – Facultad de…" /></label
+            ><label
+              >Nota de solicitud<input
+                formControlName="nota_solicitud"
+                placeholder="SEC.ADM. 53/2026" /></label
+            ><label
+              >Unidad solicitante<input
+                formControlName="unidad_solicitante"
+                placeholder="Facultad de Ciencias Jurídicas y Políticas" /></label
+            ><label class="full"
+              >Introducción<textarea rows="5" formControlName="introduccion"></textarea
+              ><span class="hint"
+                >[NOTA] se reemplazará por la nota de solicitud en el documento.</span
+              ></label
+            >
+          </div>
+        </section>
+      </div>
+    }
+    @if (step() === 2) {
+      <div class="section-heading">
+        <div>
+          <h2>Áreas y materiales</h2>
+          <p class="hint">
+            Agregue cada espacio de trabajo y seleccione los materiales del catálogo.
+          </p>
+        </div>
+        <button type="button" class="secondary" (click)="addArea()">
+          <app-icon name="plus" /> AGREGAR ÁREA
+        </button>
+      </div>
+      <div formArrayName="areas">
+        @for (area of areas.controls; track area; let ai = $index) {
+          <section class="panel area-panel" [formGroupName]="ai">
+            <div class="panel-heading">
+              <h2>Área {{ ai + 1 }} · {{ area.controls.nombre.value || 'Nueva área' }}</h2>
+              <button
+                type="button"
+                class="icon-button danger"
+                aria-label="Eliminar área"
+                (click)="removeArea(ai)"
+              >
+                <app-icon name="trash" />
+              </button>
+            </div>
+            <div class="form-section">
+              <div class="form-grid">
+                <label
+                  >Nombre del área *<input
+                    formControlName="nombre"
+                    placeholder="PLANTA BAJA" /></label
+                ><label
+                  >Uso<input formControlName="uso" placeholder="Ampliación puntos de red" /></label
+                ><label class="full"
+                  >Destino<input
+                    formControlName="destino"
+                    placeholder="Facultad - Edificio principal"
+                /></label>
+              </div>
+            </div>
+            <div class="table-scroll" formArrayName="materiales">
+              <table>
+                <thead>
+                  <tr>
+                    <th>N°</th>
+                    <th>MATERIAL</th>
+                    <th>CANTIDAD</th>
+                    <th>UNIDAD</th>
+                    <th>ACCIONES</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  @for (line of lines(ai).controls; track line; let mi = $index) {
+                    <tr [formGroupName]="mi">
+                      <td>{{ mi + 1 }}</td>
+                      <td>
+                        {{ line.controls.nombre.value }}
+                        @if (line.controls.especificaciones_override.value !== null) {
+                          <small class="subtext">Ficha particular de este informe</small>
+                        }
+                      </td>
+                      <td>
+                        <input
+                          class="quantity"
+                          type="number"
+                          min="0.001"
+                          step="0.001"
+                          formControlName="cantidad"
+                          aria-label="Cantidad del material"
+                        />
+                      </td>
+                      <td>{{ line.controls.unidad.value }}</td>
+                      <td>
+                        <div class="actions">
+                          <button type="button" class="secondary small" (click)="openSpecs(ai, mi)">
+                            Especificaciones</button
+                          ><button
+                            type="button"
+                            class="icon-button danger"
+                            aria-label="Eliminar material"
+                            (click)="removeLine(ai, mi)"
+                          >
+                            <app-icon name="trash" />
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                  } @empty {
+                    <tr>
+                      <td colspan="5" class="empty">No hay materiales en esta área.</td>
+                    </tr>
+                  }
+                </tbody>
+              </table>
+            </div>
+            <div class="area-add">
+              <button type="button" class="secondary small" (click)="openPicker(ai)">
+                <app-icon name="search" /> BUSCAR Y AGREGAR MATERIAL
+              </button>
+            </div>
+          </section>
+        } @empty {
+          <div class="panel empty">
+            <app-icon name="building" />
+            <h3>Organice el trabajo por áreas</h3>
+            <p>Por ejemplo: Planta baja, Planta alta o Laboratorio.</p>
+            <button type="button" class="primary" (click)="addArea()">Agregar primera área</button>
+          </div>
+        }
+      </div>
+      <div class="panel section-spacer">
+        <section class="form-section">
+          <div class="section-heading">
+            <h2>Costo del trabajo</h2>
+            <button type="button" class="secondary small" (click)="addCost()">
+              <app-icon name="plus" /> Agregar costo
+            </button>
+          </div>
+          <div formArrayName="costos">
+            @for (c of costs.controls; track c; let i = $index) {
+              <div class="cost-row" [formGroupName]="i">
+                <label
+                  >Descripción<input
+                    formControlName="descripcion"
+                    placeholder="TRABAJOS DE INFRAESTRUCTURA TIC" /></label
+                ><label
+                  >Costo Bs.<input
+                    type="number"
+                    min="0"
+                    step="0.01"
+                    formControlName="monto" /></label
+                ><button
+                  type="button"
+                  class="icon-button danger"
+                  aria-label="Eliminar costo"
+                  (click)="removeCost(i)"
+                >
+                  <app-icon name="trash" />
+                </button>
+              </div>
+            }
+          </div>
+          <p class="hint">Total: Bs. {{ total().toFixed(2) }}</p>
+        </section>
+        <section class="form-section">
+          <h2>Cierre y adjuntos</h2>
+          <label>Conclusión<textarea formControlName="conclusion"></textarea></label>
+          <h3 class="section-spacer">Adjuntos como texto</h3>
+          <div formArrayName="adjuntos">
+            @for (a of attachments.controls; track a; let i = $index) {
+              <div class="attachment-row">
+                <input
+                  [formControlName]="i"
+                  placeholder="Adjunto nota…"
+                  aria-label="Descripción del adjunto"
+                /><button
+                  type="button"
+                  class="icon-button danger"
+                  aria-label="Eliminar adjunto"
+                  (click)="removeAttachment(i)"
+                >
+                  <app-icon name="trash" />
+                </button>
+              </div>
+            }
+          </div>
+          <button type="button" class="secondary small" (click)="addAttachment()">
+            + Agregar adjunto
+          </button>
+        </section>
+      </div>
+    }
+    @if (step() === 3) {
+      <div class="message">
+        Las fichas se generan únicamente para los materiales incluidos en cada área. Revise
+        cantidades y especificaciones antes de finalizar.
+      </div>
+      @if (preview(); as r) {
+        <app-report-preview [report]="r" />
+      }
+    }
+    <div class="wizard-footer">
+      <button type="submit" class="secondary" [disabled]="busy()">
+        {{ busy() ? 'Guardando…' : 'Guardar borrador' }}
+      </button>
+      <div class="actions">
+        @if (step() > 1) {
+          <button type="button" class="secondary" (click)="go(step() - 1)" [disabled]="busy()">
+            Anterior
+          </button>
+        }
+        @if (step() < 3) {
+          <button type="button" class="primary" (click)="go(step() + 1)" [disabled]="busy()">
+            Continuar <app-icon name="arrow" />
+          </button>
+        } @else {
+          <button type="button" class="primary" (click)="requestFinalize()" [disabled]="busy()">
+            <app-icon name="check" /> Validar y finalizar
+          </button>
+        }
+      </div>
+    </div>
+  </form>
+}
+@if (pickerArea() !== null) {
+  <div class="modal-backdrop">
+    <section class="modal wide" role="dialog" aria-modal="true" aria-labelledby="picker-title">
+      <h2 id="picker-title">Agregar material del catálogo</h2>
+      <form [formGroup]="picker" (ngSubmit)="addMaterial()">
+        <label
+          >Buscar material<input
+            formControlName="search"
+            placeholder="Nombre, categoría o detalle…" /></label
+        ><label
+          >Material<select formControlName="material_id" size="7" aria-label="Material">
+            <option [ngValue]="0" disabled>Seleccione un material</option>
+            @for (m of matches(); track m.id) {
+              <option [ngValue]="m.id">{{ m.nombre }}</option>
+            }
+          </select></label
+        >
+        <div class="form-grid">
+          <label
+            >Cantidad<input
+              type="number"
+              min="0.001"
+              step="0.001"
+              formControlName="cantidad" /></label
+          ><label>Unidad<input readonly [value]="selected()?.unidad || '—'" /></label>
+        </div>
+        @if (selected(); as m) {
+          <p class="hint">
+            {{ m.especificaciones.length }} especificaciones técnicas se incorporarán
+            automáticamente.
+          </p>
+        }
+        @if (picker.touched && picker.invalid) {
+          <p class="field-error">Seleccione un material e ingrese una cantidad mayor que cero.</p>
+        }
+        <div class="form-actions">
+          <button type="button" class="secondary" (click)="pickerArea.set(null)">Cancelar</button
+          ><button class="primary">Agregar material</button>
+        </div>
+      </form>
+    </section>
+  </div>
+}
+@if (specTarget(); as t) {
+  <div class="modal-backdrop">
+    <section class="modal wide" role="dialog" aria-modal="true" aria-labelledby="spec-title">
+      <h2 id="spec-title">Especificaciones técnicas</h2>
+      <p>
+        {{ lines(t.area).at(t.line).controls.nombre.value }} · Cantidad:
+        {{ lines(t.area).at(t.line).controls.cantidad.value }}
+      </p>
+      <form [formGroup]="specForm" (ngSubmit)="saveSpecs()">
+        <div formArrayName="items">
+          @for (s of specs.controls; track s; let i = $index) {
+            <div class="spec-row" [formGroupName]="i">
+              <input formControlName="nombre" aria-label="Nombre de especificación" /><textarea
+                formControlName="valor"
+                aria-label="Valor de especificación"
+              ></textarea>
+              @if (specEditable()) {
+                <button
+                  type="button"
+                  class="icon-button danger"
+                  aria-label="Eliminar especificación"
+                  (click)="specs.removeAt(i)"
+                >
+                  <app-icon name="trash" />
+                </button>
+              }
+            </div>
+          } @empty {
+            <p>Sin especificaciones registradas.</p>
+          }
+        </div>
+        @if (specEditable()) {
+          <button type="button" class="secondary small" (click)="addSpec()">
+            + Agregar especificación
+          </button>
+          <p class="hint">Esta modificación se guardará solo en este informe.</p>
+        } @else {
+          <button type="button" class="secondary" (click)="enableSpecs()">
+            Editar especificaciones solo para este informe
+          </button>
+        }
+        @if (specForm.touched && specForm.invalid) {
+          <p class="field-error">Cada especificación necesita nombre y valor.</p>
+        }
+        <div class="form-actions">
+          <button type="button" class="secondary" (click)="specTarget.set(null)">Cerrar</button>
+          @if (specEditable()) {
+            <button type="button" class="secondary" (click)="resetSpecs()">
+              Restaurar ficha original</button
+            ><button class="primary">Aplicar al informe</button>
+          }
+        </div>
+      </form>
+    </section>
+  </div>
+}
+@if (finalConfirm()) {
+  <div class="modal-backdrop">
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="final-title">
+      <h2 id="final-title">Finalizar informe</h2>
+      <p>
+        Los datos obligatorios están completos. Al finalizar, el documento quedará protegido contra
+        ediciones. Podrá descargar PDF y Word, o duplicarlo para elaborar otro informe.
+      </p>
+      <div class="form-actions">
+        <button
+          type="button"
+          class="secondary"
+          (click)="finalConfirm.set(false)"
+          [disabled]="busy()"
+        >
+          Seguir revisando</button
+        ><button type="button" class="primary" (click)="save(true)" [disabled]="busy()">
+          {{ busy() ? 'Guardando…' : 'Finalizar y guardar' }}
+        </button>
+      </div>
+    </section>
+  </div>
+}
