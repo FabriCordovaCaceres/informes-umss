@@ -1,0 +1,12 @@
+# Set UMSS_HOST to the stable IP address or internal DNS name of the office PC.
+{$UMSS_HOST} {
+    tls internal
+
+    handle /api/* {
+        reverse_proxy 127.0.0.1:3000
+    }
+
+    handle {
+        reverse_proxy 127.0.0.1:4000
+    }
+}
