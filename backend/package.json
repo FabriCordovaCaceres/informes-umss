@@ -1,0 +1,35 @@
+{
+  "name": "umss-informes-api",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "migrate": "tsx src/utils/migrate.ts",
+    "seed": "tsx src/utils/seed.ts",
+    "provision:users": "tsx src/utils/provision-users.ts",
+    "rotate:admin-password": "tsx src/utils/rotate-admin-password.ts",
+    "test": "tsx --test src/**/*.test.ts",
+    "db:start": "pg_ctl -D ../database/pgdata -l ../database/postgresql.log -o \"-h 127.0.0.1 -p 5432 -k /tmp\" start",
+    "db:stop": "pg_ctl -D ../database/pgdata stop",
+    "db:status": "pg_ctl -D ../database/pgdata status"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.0",
+    "express": "^5.1.0",
+    "pg": "^8.16.0",
+    "zod": "^4.0.0",
+    "pdfkit": "^0.17.2",
+    "docx": "^9.5.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.1",
+    "@types/node": "^22.12.0",
+    "@types/pg": "^8.15.0",
+    "@types/pdfkit": "^0.17.0",
+    "typescript": "~6.0.2",
+    "tsx": "^4.20.0"
+  }
+}

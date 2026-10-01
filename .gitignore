@@ -1,0 +1,26 @@
+# Dependencias y archivos generados
+**/node_modules/
+**/dist/
+**/.angular/
+**/coverage/
+**/.cache/
+**/.DS_Store
+**/Thumbs.db
+*.log
+
+# Configuración y credenciales locales
+**/.env
+**/.env.*
+!**/.env.example
+*.pem
+*.key
+
+# Datos reales y respaldos de PostgreSQL
+database/pgdata/
+database/*.dump
+database/*.backup
+database/*.sql.gz
+
+# Documentos institucionales de origen: contienen datos personales
+docs/*.docx
+docs/*.pdf
