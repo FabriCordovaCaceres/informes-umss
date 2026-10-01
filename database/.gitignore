@@ -1,0 +1,3 @@
+pgdata/
+postgresql.log
+*.dump

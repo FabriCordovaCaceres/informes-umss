@@ -1,0 +1,1944 @@
+[
+  {
+    "nombre": "ROLLO UTP 4 PARES CAT6 24 AWG (305mts)",
+    "unidad": "PZA",
+    "categoria": "Redes e infraestructura",
+    "descripcion": "",
+    "activo": true,
+    "especificaciones": [
+      {
+        "nombre": "Marca",
+        "valor": "El proveedor deberá especificar la marca verificable en el sitio del fabricante"
+      },
+      {
+        "nombre": "Descripción",
+        "valor": "Cable para transmisión de datos Categoría 6 sin blindaje, para uso interno"
+      },
+      {
+        "nombre": "Aplicación",
+        "valor": "Soporta ATM -155 (UTP); AF-PHY-OO15.000; AF-PHY-0018.000; TP-PMD; ANSI X3T9.5; GIGABITETHERNET; IEEE 802.3ab 1000 BASE T; IEEE 802.3an 2006; 100BASE-TX; IEEE 802.3u;100BASE-T4; IEEE 802.3u; 100vg-AnyLAN; IEEE802.12; 10BASE-T; IEEE802.3; TOKEN RING;IEEE802.5; 3X-AS400; IBM; TSB-155; ATM LAN 1.2 Gbit/s; AF-PHY 0162.000 2001."
+      },
+      {
+        "nombre": "Categoría",
+        "valor": "CAT.6"
+      },
+      {
+        "nombre": "Compatibilidad",
+        "valor": "Toda la línea FCS Conectores y patch panels CAT.6"
+      },
+      {
+        "nombre": "Conductor",
+        "valor": "Hilo Sólido de cobre desnudo 100% cobre"
+      },
+      {
+        "nombre": "Calibre del Conductor",
+        "valor": "24 awg"
+      },
+      {
+        "nombre": "Aislamiento",
+        "valor": "Polietileno de alta densidad con diámetro nominal del conductor aislado 1,0mm"
+      },
+      {
+        "nombre": "Longitud",
+        "valor": "305 mts"
+      },
+      {
+        "nombre": "Diámetro nominal",
+        "valor": "Mínimamente 6,0 mm"
+      },
+      {
+        "nombre": "Grado de Flamabilidad",
+        "valor": "LSZH-1 - IEC 60332-1"
+      },
+      {
+        "nombre": "soporte a POE",
+        "valor": "PoE (IEEE 802.3af) - Sin restricción de bundlePoE+ (IEEE 802.at) - Sin restricción de bundlePoE++ (IEEE 802.bt) - 192 bundles4PPoE (IEEE 802.bt) - 128 bundles"
+      },
+      {
+        "nombre": "Certificaciones",
+        "valor": "ETL Verified, ETL 4 conexiones, ETL 6 conexiones, Anatel, Etiqueta Ecológica ABNT"
+      },
+      {
+        "nombre": "Norma",
+        "valor": "ANSI/TIA-568.2-D, ISO/IEC 11801, IEC 61156-5, IEC 60332-1, IEC 60754-2, IEC 61034-1 / 2, UL 444, ABNT NBR 14703, ABNT NBR 14705"
+      }
+    ]
+  },
+  {
+    "nombre": "KEYSTONE HEMBRA CAT.6",
+    "unidad": "PZA",
+    "categoria": "Redes e infraestructura",
+    "descripcion": "",
+    "activo": true,
+    "especificaciones": [
+      {
+        "nombre": "Marca",
+        "valor": "El proveedor deberá especificar la marca verificable en el sitio del fabricante"
+      },
+      {
+        "nombre": "Compatibilidad",
+        "valor": "Patch Panel descargado y Faceplate"
+      },
+      {
+        "nombre": "Aplicación",
+        "valor": "Soporte IEEE 802.3, 1000 BASE T, 1000 BASE TX, EIA/TIA-854, ANSI/TIA-862, ATM, Vídeo, Sistemas de Automatización Predial, y todos los protocolos LAN anteriores;"
+      },
+      {
+        "nombre": "Soporte a POE",
+        "valor": "802.3af y 802.3at"
+      },
+      {
+        "nombre": "Tipo de conector",
+        "valor": "RJ-45 Hembra (Keystone Jack)"
+      },
+      {
+        "nombre": "Estándares de montaje",
+        "valor": "T568A y T568B"
+      },
+      {
+        "nombre": "Conexión",
+        "valor": "Padrón 110 IDC, 8 posiciones, en bronce fosforoso estañado, paraconductores de 22 hasta 26 AWG"
+      },
+      {
+        "nombre": "Tipo de cable",
+        "valor": "U/UTP Cat.6"
+      },
+      {
+        "nombre": "Certificaciones",
+        "valor": "ETL 6 Channel Verified, ETL Verified, UL Listed E173971"
+      },
+      {
+        "nombre": "Norma",
+        "valor": "ANSI/TIA-568-C.2, ISO/IEC 11801, EN 50173-1, IEC 60603-7, FCC parte 68, NBR 14565, NMX-I-248-NYCE-2008"
+      }
+    ]
+  },
+  {
+    "nombre": "PATCH CORD CERTIFICADO CAT 6 (0.5mts)",
+    "unidad": "PZA",
+    "categoria": "Redes e infraestructura",
+    "descripcion": "",
+    "activo": true,
+    "especificaciones": [
+      {
+        "nombre": "Marca",
+        "valor": "El proveedor deberá especificar la marca verificable en el sitio del fabricante"
+      },
+      {
+        "nombre": "Soporte a POE",
+        "valor": "802.3af y 802.3at"
+      },
+      {
+        "nombre": "Aplicación",
+        "valor": "Soporte IEEE 802.3, 1000 BASE T, 1000 BASE TX, EIA/TIA-854, ANSI/TIA-862, ATM, Vídeo, Sistemasde Automatización Predial, y todos los protocolos LAN anteriores;"
+      },
+      {
+        "nombre": "Longitud",
+        "valor": "Mininamente 0.5 mts"
+      },
+      {
+        "nombre": "Tipo de Conector",
+        "valor": "Plug de 8 posiciones RJ-45 en ambos extremos"
+      },
+      {
+        "nombre": "Tipo de Cable",
+        "valor": "U/UTP Cat.6 stranded multifilar de 4 pares"
+      },
+      {
+        "nombre": "Tipo de conductor",
+        "valor": "100% cobre electrolítico"
+      },
+      {
+        "nombre": "Grado de Flamabilidad",
+        "valor": "CM, CMR ou LSZH"
+      },
+      {
+        "nombre": "Cantidad de Pares",
+        "valor": "4 pares, 24AWG"
+      },
+      {
+        "nombre": "Certificaciones",
+        "valor": "ETL Canal de 4 Conectores, ETL Verified, UL Listed 173971 (CM)"
+      },
+      {
+        "nombre": "Norma",
+        "valor": "ANSI/TIA-568.2-D, ISO/IEC 11801, EN 50173-1, IEC 60603-7, FCC parte 68, NBR 14565, NMX-I-248-NYCE-2008, ANSI/TIA-606-C"
+      }
+    ]
+  },
+  {
+    "nombre": "PATCH CORD CERTIFICADO CAT 6 (3 mts)",
+    "unidad": "PZA",
+    "categoria": "Redes e infraestructura",
+    "descripcion": "",
+    "activo": true,
+    "especificaciones": [
+      {
+        "nombre": "Marca",
+        "valor": "El proveedor deberá especificar la marca verificable en el sitio del fabricante"
+      },
+      {
+        "nombre": "Soporte a POE",
+        "valor": "802.3af y 802.3at"
+      },
+      {
+        "nombre": "Aplicación",
+        "valor": "Soporte IEEE 802.3, 1000 BASE T, 1000 BASE TX, EIA/TIA-854, ANSI/TIA-862, ATM, Vídeo, Sistemasde Automatización Predial, y todos los protocolos LAN anteriores;"
+      },
+      {
+        "nombre": "Longitud",
+        "valor": "Mininamente 3 mts"
+      },
+      {
+        "nombre": "Tipo de Conector",
+        "valor": "Plug de 8 posiciones RJ-45 en ambos extremos"
+      },
+      {
+        "nombre": "Tipo de Cable",
+        "valor": "U/UTP Cat.6 stranded multifilar de 4 pares"
+      },
+      {
+        "nombre": "Tipo de conductor",
+        "valor": "100% cobre electrolítico"
+      },
+      {
+        "nombre": "Grado de Flamabilidad",
+        "valor": "CM, CMR ou LSZH"
+      },
+      {
+        "nombre": "Cantidad de Pares",
+        "valor": "4 pares, 24AWG"
+      },
+      {
+        "nombre": "Certificaciones",
+        "valor": "ETL Canal de 4 Conectores, ETL Verified, UL Listed 173971 (CM)"
+      },
+      {
+        "nombre": "Norma",
+        "valor": "ANSI/TIA-568.2-D, ISO/IEC 11801, EN 50173-1, IEC 60603-7, FCC parte 68, NBR 14565, NMX-I-248-NYCE-2008, ANSI/TIA-606-C"
+      }
+    ]
+  },
+  {
+    "nombre": "CAJAS TIPO CHUQUI",
+    "unidad": "PZA",
+    "categoria": "Redes e infraestructura",
+    "descripcion": "",
+    "activo": true,
+    "especificaciones": [
+      {
+        "nombre": "Altura (mm)",
+        "valor": "Aprox. 114 mm"
+      },
+      {
+        "nombre": "Ancho (mm)",
+        "valor": "Aprox. 69 mm"
+      },
+      {
+        "nombre": "Profundidad (mm)",
+        "valor": "Aprox. 48 mm"
+      },
+      {
+        "nombre": "Color",
+        "valor": "Blanco"
+      },
+      {
+        "nombre": "Cantidad de Posiciones",
+        "valor": "Número de posiciones del faceplate instalado"
+      },
+      {
+        "nombre": "Material del Cuerpo del Producto",
+        "valor": "Termoplástico ABS de alto impacto, no propagante a la llama UL 94 V-0."
+      },
+      {
+        "nombre": "Certificaciones",
+        "valor": "UL Listed E173971"
+      },
+      {
+        "nombre": "Norma",
+        "valor": "NMX-I-248-NYCE-2008"
+      }
+    ]
+  },
+  {
+    "nombre": "FACE PLATE PLANO 2P CONEXIÓN RJ45 CAT 6",
+    "unidad": "PZA",
+    "categoria": "Redes e infraestructura",
+    "descripcion": "",
+    "activo": true,
+    "especificaciones": [
+      {
+        "nombre": "Altura (mm)",
+        "valor": "Aprox. 114,3 mm"
+      },
+      {
+        "nombre": "Ancho (mm)",
+        "valor": "Aprox. 69,8 mm"
+      },
+      {
+        "nombre": "Profundidad (mm)",
+        "valor": "Aprox. 10 mm"
+      },
+      {
+        "nombre": "Color",
+        "valor": "Blanco"
+      },
+      {
+        "nombre": "Tipo de Conector",
+        "valor": "RJ-45"
+      },
+      {
+        "nombre": "Cantidad de Posiciones",
+        "valor": "02 posiciones"
+      },
+      {
+        "nombre": "Material del Cuerpo del Producto",
+        "valor": "Termoplástico ABS de alto impacto, no propagante a la llama UL 94 V-0."
+      },
+      {
+        "nombre": "Certificaciones",
+        "valor": "UL Listed E173971"
+      }
+    ]
+  },
+  {
+    "nombre": "CABLE CANAL 20X20mm con adhesivo",
+    "unidad": "PZA",
+    "categoria": "Redes e infraestructura",
+    "descripcion": "",
+    "activo": true,
+    "especificaciones": [
+      {
+        "nombre": "Descripción",
+        "valor": "Canaleta compuesta de base y tapa 20x20 mm"
+      },
+      {
+        "nombre": "Material",
+        "valor": "ABS"
+      },
+      {
+        "nombre": "Color",
+        "valor": "Blanco"
+      },
+      {
+        "nombre": "Adhesivo",
+        "valor": "Si"
+      }
+    ]
+  },
+  {
+    "nombre": "CABLE CANAL 40X40mm con adhesivo",
+    "unidad": "PZA",
+    "categoria": "Redes e infraestructura",
+    "descripcion": "",
+    "activo": true,
+    "especificaciones": [
+      {
+        "nombre": "Descripción",
+        "valor": "Canaleta compuesta de base y tapa 40x40 mm"
+      },
+      {
+        "nombre": "Material",
+        "valor": "ABS"
+      },
+      {
+        "nombre": "Color",
+        "valor": "Blanco"
+      },
+      {
+        "nombre": "Adhesivo",
+        "valor": "Si"
+      }
+    ]
+  },
+  {
+    "nombre": "TORNILLOS DE ENCARNE #6 DE 1 ¼”",
+    "unidad": "PZA",
+    "categoria": "Redes e infraestructura",
+    "descripcion": "",
+    "activo": true,
+    "especificaciones": [
+      {
+        "nombre": "Medidas",
+        "valor": "4.5x40 mm"
+      },
+      {
+        "nombre": "Material",
+        "valor": "Hierro"
+      }
+    ]
+  },
+  {
+    "nombre": "RAMPLUS #6 P/LADRILLO HUECO",
+    "unidad": "PZA",
+    "categoria": "Redes e infraestructura",
+    "descripcion": "",
+    "activo": true,
+    "especificaciones": [
+      {
+        "nombre": "Especificaciones",
+        "valor": "Plástico NYLON"
+      },
+      {
+        "nombre": "Usos",
+        "valor": "Para sujeciones en hormigón, ladrillo y yeso principalmente"
+      },
+      {
+        "nombre": "Medidas",
+        "valor": "#6"
+      }
+    ]
+  },
+  {
+    "nombre": "GABINETE 9U PARA EMPOTRAR",
+    "unidad": "PZA",
+    "categoria": "Redes e infraestructura",
+    "descripcion": "",
+    "activo": true,
+    "especificaciones": [
+      {
+        "nombre": "Profundidad",
+        "valor": "Aprox. 500 mm"
+      },
+      {
+        "nombre": "Altura (mm)",
+        "valor": "Aprox. 540 mm"
+      },
+      {
+        "nombre": "Ancho (mm)",
+        "valor": "Aprox. 600 mm"
+      },
+      {
+        "nombre": "Color",
+        "valor": "negro"
+      },
+      {
+        "nombre": "Material del cuerpo",
+        "valor": "Acero laminado con puerta de vidrio templado"
+      },
+      {
+        "nombre": "Tipo de montaje",
+        "valor": "Instalación de montaje en pared"
+      },
+      {
+        "nombre": "Certificaciones",
+        "valor": "EIA/ECA-310-E, IEC 60297, UL 2416 / UL 60950-1, RoHS"
+      }
+    ]
+  },
+  {
+    "nombre": "PATCH PANEL DE 24 ENTRADAS 1RU DESCARGADO 24 ICONOS",
+    "unidad": "PZA",
+    "categoria": "Redes e infraestructura",
+    "descripcion": "",
+    "activo": true,
+    "especificaciones": [
+      {
+        "nombre": "Marca",
+        "valor": "El proveedor deberá especificar la marca verificable en el sitio del fabricante"
+      },
+      {
+        "nombre": "Ancho (mm)",
+        "valor": "Aprox. 482,6 mm (19\")"
+      },
+      {
+        "nombre": "Altura (mm)",
+        "valor": "Aprox. 44,45 mm"
+      },
+      {
+        "nombre": "espesor de la chapa",
+        "valor": "Aprox. 1,5 mm"
+      },
+      {
+        "nombre": "Color",
+        "valor": "negro"
+      },
+      {
+        "nombre": "Tipo de Conector Frontal",
+        "valor": "RJ-45 F/UTP 5e, 6 o 6A."
+      },
+      {
+        "nombre": "Cantidad de posiciones",
+        "valor": "24 posiciones"
+      },
+      {
+        "nombre": "Material del cuerpo del producto",
+        "valor": "Acero SAE1020 y Termoplástico de alto impacto UL94V-0."
+      },
+      {
+        "nombre": "Diámetro de conductor",
+        "valor": "26 a 22 AWG"
+      },
+      {
+        "nombre": "Accesorios Incluidos",
+        "valor": "Tornillos de fijación, Icono azul y Rojo, Soporte para etiquetas en acrílico; Guía trasero de cables que permite la fijación individual de los cables, Cable de puesta a tierra."
+      },
+      {
+        "nombre": "Certificación",
+        "valor": "UL Listed E173971"
+      },
+      {
+        "nombre": "Norma",
+        "valor": "ANSI/TIA-569-C, ANSI/TIA-606, ISO/IEC 11801, EIA/ECA-310-E, NBR 14565"
+      }
+    ]
+  },
+  {
+    "nombre": "PANEL CANALETA HORIZONTAL CON CUBIERTA DE 1RU (ORDENADOR)",
+    "unidad": "PZA",
+    "categoria": "Redes e infraestructura",
+    "descripcion": "",
+    "activo": true,
+    "especificaciones": [
+      {
+        "nombre": "Compatibilidad",
+        "valor": "Racks 19\""
+      },
+      {
+        "nombre": "Altura (mm)",
+        "valor": "1U"
+      },
+      {
+        "nombre": "Ancho (mm)",
+        "valor": "Aprox. 482 mm (19\")"
+      },
+      {
+        "nombre": "Color",
+        "valor": "negro"
+      },
+      {
+        "nombre": "Material del cuerpo",
+        "valor": "Termoplástico de alto impacto UL 94 V0"
+      },
+      {
+        "nombre": "Carga Máxima Permisible (N)",
+        "valor": "CAT.5e - (24 cables), CAT.6 - (24 cables)"
+      },
+      {
+        "nombre": "Certificaciones",
+        "valor": "UL Listed E173971"
+      },
+      {
+        "nombre": "Norma",
+        "valor": "ANSI/TIA-569-C, EIA/ECA-310-E"
+      }
+    ]
+  },
+  {
+    "nombre": "REGLETA TIPO PDU MULTITOMA ELÉCTRICA 6 TOMAS A TIERRA HORIZONTAL 1RU TOMA UNIVERSAL",
+    "unidad": "PZA",
+    "categoria": "Redes e infraestructura",
+    "descripcion": "",
+    "activo": true,
+    "especificaciones": [
+      {
+        "nombre": "Conexiones de salida",
+        "valor": "6 tomas universales"
+      },
+      {
+        "nombre": "Espacio en rack",
+        "valor": "1 RU"
+      },
+      {
+        "nombre": "Voltaje de salida",
+        "valor": "220 V"
+      },
+      {
+        "nombre": "Tipo de conexión de entrada",
+        "valor": "NEMA 5-15P"
+      }
+    ]
+  },
+  {
+    "nombre": "CINTA VELCRO 10MM x 3MTS",
+    "unidad": "PZA",
+    "categoria": "Redes e infraestructura",
+    "descripcion": "",
+    "activo": true,
+    "especificaciones": [
+      {
+        "nombre": "Especificaciones",
+        "valor": "Para peinado de cables en el Rack"
+      },
+      {
+        "nombre": "Medidas",
+        "valor": "10 mm ancho x 2 mm espesor"
+      }
+    ]
+  },
+  {
+    "nombre": "CINTA AISLANTE 20 YD",
+    "unidad": "PZA",
+    "categoria": "Redes e infraestructura",
+    "descripcion": "",
+    "activo": true,
+    "especificaciones": [
+      {
+        "nombre": "Tipo de uso",
+        "valor": "Para aplicación de aislamiento eléctrico"
+      },
+      {
+        "nombre": "Color",
+        "valor": "Negro"
+      },
+      {
+        "nombre": "Longitud",
+        "valor": "20 yardas"
+      }
+    ]
+  },
+  {
+    "nombre": "TUBO PLASTICO PVC 2\"",
+    "unidad": "PZA",
+    "categoria": "Redes e infraestructura",
+    "descripcion": "",
+    "activo": true,
+    "especificaciones": [
+      {
+        "nombre": "Descripción",
+        "valor": "Tubo PVC para exterior"
+      },
+      {
+        "nombre": "Material",
+        "valor": "PVC"
+      },
+      {
+        "nombre": "Diámetro",
+        "valor": "2”"
+      },
+      {
+        "nombre": "Resistencia UV",
+        "valor": "UL 651"
+      }
+    ]
+  },
+  {
+    "nombre": "CODO PLASTICO PVC 2\"",
+    "unidad": "PZA",
+    "categoria": "Redes e infraestructura",
+    "descripcion": "",
+    "activo": true,
+    "especificaciones": [
+      {
+        "nombre": "Descripción",
+        "valor": "Codo de PVC para uso exterior"
+      },
+      {
+        "nombre": "Material",
+        "valor": "PVC"
+      },
+      {
+        "nombre": "Diámetro",
+        "valor": "2”"
+      },
+      {
+        "nombre": "Angulo curvatura",
+        "valor": "90°"
+      },
+      {
+        "nombre": "Resistencia UV",
+        "valor": "UL 651"
+      },
+      {
+        "nombre": "Inflamabilidad",
+        "valor": "ULS94V-0"
+      }
+    ]
+  },
+  {
+    "nombre": "ABRAZADERA TIPO OMEGA PARA TUBO DE 2\"",
+    "unidad": "PZA",
+    "categoria": "Redes e infraestructura",
+    "descripcion": "",
+    "activo": true,
+    "especificaciones": [
+      {
+        "nombre": "Descripción",
+        "valor": "Abrazadera metaliza tipo omega para tubo PVC"
+      },
+      {
+        "nombre": "Material",
+        "valor": "Acero Galvanizado"
+      },
+      {
+        "nombre": "Diámetro",
+        "valor": "2”"
+      },
+      {
+        "nombre": "Tipo",
+        "valor": "Omega"
+      },
+      {
+        "nombre": "Norma",
+        "valor": "ASTM A153"
+      },
+      {
+        "nombre": "Certificación",
+        "valor": "UL 2239"
+      }
+    ]
+  },
+  {
+    "nombre": "CAJA DE DISTRIBUCION PVC PARA TUBO DE 2\"",
+    "unidad": "PZA",
+    "categoria": "Redes e infraestructura",
+    "descripcion": "",
+    "activo": true,
+    "especificaciones": [
+      {
+        "nombre": "Descripción",
+        "valor": "Caja de distribución para tubo PVC de doble ingreso"
+      },
+      {
+        "nombre": "Material",
+        "valor": "PVC"
+      },
+      {
+        "nombre": "Diámetro",
+        "valor": "2”"
+      },
+      {
+        "nombre": "Angulo curvatura",
+        "valor": "90°"
+      },
+      {
+        "nombre": "Resistencia UV",
+        "valor": "UL 651"
+      },
+      {
+        "nombre": "Inflamabilidad",
+        "valor": "ULS94V-0"
+      }
+    ]
+  },
+  {
+    "nombre": "BROCA PARA CONCRETO SDS #6",
+    "unidad": "PZA",
+    "categoria": "Redes e infraestructura",
+    "descripcion": "",
+    "activo": true,
+    "especificaciones": [
+      {
+        "nombre": "Medidas",
+        "valor": "15 cm x 6 mm"
+      },
+      {
+        "nombre": "Material",
+        "valor": "Acero laminado con punta de tungsteno"
+      }
+    ]
+  },
+  {
+    "nombre": "PRECINTOS PLÁSTICOS PAQUETE (100 UND.) 20CM",
+    "unidad": "PZA",
+    "categoria": "Redes e infraestructura",
+    "descripcion": "",
+    "activo": true,
+    "especificaciones": [
+      {
+        "nombre": "Descripción",
+        "valor": "Bolsa de 100 unidades"
+      },
+      {
+        "nombre": "Tamaño",
+        "valor": "Aprox. 3,6x200 mm"
+      },
+      {
+        "nombre": "Material",
+        "valor": "Nylon"
+      }
+    ]
+  },
+  {
+    "nombre": "PUNTO DE ACCESO INALÁMBRICO",
+    "unidad": "PZA",
+    "categoria": "Redes e infraestructura",
+    "descripcion": "",
+    "activo": true,
+    "especificaciones": [
+      {
+        "nombre": "Marca y modelo",
+        "valor": "El proveedor deberá especificar la marca y modelo verificable en el sitio del fabricante"
+      },
+      {
+        "nombre": "Interfaces de red",
+        "valor": "Mayor o igual a 2 puertos Ethernet 10/100/1000 Mbit/s"
+      },
+      {
+        "nombre": "Memoria RAM",
+        "valor": "128 MB o superior"
+      },
+      {
+        "nombre": "Tipo",
+        "valor": "De montaje en cielo falso o techo."
+      },
+      {
+        "nombre": "Ganancia de antena (max)",
+        "valor": "2 dBi o superior"
+      },
+      {
+        "nombre": "Frecuencia de banda",
+        "valor": "2.412 - 2.484, 5.15 - 5.875 GHz"
+      },
+      {
+        "nombre": "Generación de WIFI",
+        "valor": "WIFI 6"
+      },
+      {
+        "nombre": "Tipo de Antena",
+        "valor": "Interno (Antena integrada)"
+      },
+      {
+        "nombre": "Estándar WIFI",
+        "valor": "802.11b/g/n/ac"
+      },
+      {
+        "nombre": "Puertos PoE-salida",
+        "valor": "Ethernet2"
+      }
+    ]
+  },
+  {
+    "nombre": "PATCH CORD U/UTP GIGALAN CAT.6 / 0,9 MTS",
+    "unidad": "PZA",
+    "categoria": "Cableado estructurado",
+    "descripcion": "",
+    "activo": true,
+    "especificaciones": [
+      {
+        "nombre": "Marca",
+        "valor": "El proveedor deberá especificar la marca verificable en el sitio del fabricante"
+      },
+      {
+        "nombre": "Soporte a POE",
+        "valor": "802.3af y 802.3at"
+      },
+      {
+        "nombre": "Aplicación",
+        "valor": "Soporte IEEE 802.3, 1000 BASE T, 1000 BASE TX, EIA/TIA-854, ANSI/TIA-862, ATM, Vídeo, Sistemasde Automatización Predial, y todos los protocolos LAN anteriores;"
+      },
+      {
+        "nombre": "Longitud",
+        "valor": "Mínimamente .9 mts"
+      },
+      {
+        "nombre": "Tipo de Conector",
+        "valor": "Plug de 8 posiciones RJ-45 en ambos extremos"
+      },
+      {
+        "nombre": "Tipo de Cable",
+        "valor": "U/UTP Cat.6 stranded multifilar de 4 pares"
+      },
+      {
+        "nombre": "Tipo de conductor",
+        "valor": "100% cobre electrolítico"
+      },
+      {
+        "nombre": "Grado de Flamabilidad",
+        "valor": "CM, CMR o u LSZH"
+      },
+      {
+        "nombre": "Cantidad de Pares",
+        "valor": "4 pares, 24AWG"
+      },
+      {
+        "nombre": "Certificaciones",
+        "valor": "ETL Canal de 4 Conectores, ETL Verified, UL Listed 173971 (CM)"
+      },
+      {
+        "nombre": "Norma",
+        "valor": "ANSI/TIA-568.2-D, ISO/IEC 11801, EN 50173-1, IEC 60603-7, FCC parte 68, NBR 14565, NMX-I-248-NYCE-2008, ANSI/TIA-606-C"
+      }
+    ]
+  },
+  {
+    "nombre": "PATCH CORD U/UTP GIGALAN CAT.6 / 2 MTS",
+    "unidad": "PZA",
+    "categoria": "Cableado estructurado",
+    "descripcion": "",
+    "activo": true,
+    "especificaciones": [
+      {
+        "nombre": "Marca",
+        "valor": "El proveedor deberá especificar la marca verificable en el sitio del fabricante"
+      },
+      {
+        "nombre": "Soporte a POE",
+        "valor": "802.3af y 802.3at"
+      },
+      {
+        "nombre": "Aplicación",
+        "valor": "Soporte IEEE 802.3, 1000 BASE T, 1000 BASE TX, EIA/TIA-854, ANSI/TIA-862, ATM, Vídeo, Sistemasde Automatización Predial, y todos los protocolos LAN anteriores;"
+      },
+      {
+        "nombre": "Longitud",
+        "valor": "Mínimamente 2 mts"
+      },
+      {
+        "nombre": "Tipo de Conector",
+        "valor": "Plug de 8 posiciones RJ-45 en ambos extremos"
+      },
+      {
+        "nombre": "Tipo de Cable",
+        "valor": "U/UTP Cat.6 stranded multifilar de 4 pares"
+      },
+      {
+        "nombre": "Tipo de conductor",
+        "valor": "100% cobre electrolítico"
+      },
+      {
+        "nombre": "Grado de Flamabilidad",
+        "valor": "CM, CMR o u LSZH"
+      },
+      {
+        "nombre": "Cantidad de Pares",
+        "valor": "4 pares, 24AWG"
+      },
+      {
+        "nombre": "Certificaciones",
+        "valor": "ETL Canal de 4 Conectores, ETL Verified, UL Listed 173971 (CM)"
+      },
+      {
+        "nombre": "Norma",
+        "valor": "ANSI/TIA-568.2-D, ISO/IEC 11801, EN 50173-1, IEC 60603-7, FCC parte 68, NBR 14565, NMX-I-248-NYCE-2008, ANSI/TIA-606-C"
+      }
+    ]
+  },
+  {
+    "nombre": "FACEPLATE PLANO 2P CONEXIÓN RJ45",
+    "unidad": "PZA",
+    "categoria": "Cableado estructurado",
+    "descripcion": "",
+    "activo": true,
+    "especificaciones": [
+      {
+        "nombre": "Marca",
+        "valor": "El proveedor deberá especificar la marca verificable en el sitio del fabricante"
+      },
+      {
+        "nombre": "Altura (mm)",
+        "valor": "Aprox. 114,3 mm"
+      },
+      {
+        "nombre": "Ancho (mm)",
+        "valor": "Aprox. 69,8 mm"
+      },
+      {
+        "nombre": "Profundidad (mm)",
+        "valor": "Aprox. 10 mm"
+      },
+      {
+        "nombre": "Color",
+        "valor": "Blanco"
+      },
+      {
+        "nombre": "Tipo de Conector",
+        "valor": "RJ-45"
+      },
+      {
+        "nombre": "Cantidad de Posiciones",
+        "valor": "02 posiciones"
+      },
+      {
+        "nombre": "Material del Cuerpo del Producto",
+        "valor": "Termoplástico ABS de alto impacto, no propagante a la llama UL 94 V-0."
+      },
+      {
+        "nombre": "Certificaciones",
+        "valor": "UL Listed E173971"
+      }
+    ]
+  },
+  {
+    "nombre": "TAPA CIEGA RJ45",
+    "unidad": "PZA",
+    "categoria": "Cableado estructurado",
+    "descripcion": "",
+    "activo": true,
+    "especificaciones": [
+      {
+        "nombre": "Compatibilidad",
+        "valor": "Faceplates planos y angulares, patch panel descargado"
+      },
+      {
+        "nombre": "Altura (mm)",
+        "valor": "Aprox. 21,5 mm"
+      },
+      {
+        "nombre": "Ancho (mm)",
+        "valor": "Aprox. 16,5 mm"
+      },
+      {
+        "nombre": "Profundidad (mm)",
+        "valor": "Aprox. 20,5 mm"
+      },
+      {
+        "nombre": "Color",
+        "valor": "Blanco"
+      },
+      {
+        "nombre": "Tipo de Conector",
+        "valor": "RJ-45"
+      },
+      {
+        "nombre": "Cantidad de Posiciones",
+        "valor": "01 posiciones"
+      },
+      {
+        "nombre": "Material del Cuerpo del Producto",
+        "valor": "Termoplástico ABS de alto impacto"
+      },
+      {
+        "nombre": "Certificaciones",
+        "valor": "UL Listed E173971"
+      }
+    ]
+  },
+  {
+    "nombre": "TAPA CIEGA PARA CAJA CHUQUI",
+    "unidad": "PZA",
+    "categoria": "Cableado estructurado",
+    "descripcion": "",
+    "activo": true,
+    "especificaciones": [
+      {
+        "nombre": "Color",
+        "valor": "Blanco"
+      },
+      {
+        "nombre": "Aplicación",
+        "valor": "Cubierta de cajas de sobre poner"
+      }
+    ]
+  },
+  {
+    "nombre": "KEYSTONE HEMBRA GIGALAN PREMIUM CAT.6",
+    "unidad": "PZA",
+    "categoria": "Cableado estructurado",
+    "descripcion": "",
+    "activo": true,
+    "especificaciones": [
+      {
+        "nombre": "Marca",
+        "valor": "El proveedor deberá especificar la marca verificable en el sitio del fabricante"
+      },
+      {
+        "nombre": "Compatibilidad",
+        "valor": "Patch Panel descargado y faceplates de la Familia FISACESSO"
+      },
+      {
+        "nombre": "Aplicación",
+        "valor": "Soporte IEEE 802.3, 1000 BASE T, 1000 BASE TX, EIA/TIA-854, ANSI/TIA-862, ATM, Vídeo, Sistemas de Automatización Predial, y todos los protocolos LAN anteriores;"
+      },
+      {
+        "nombre": "Soporte a POE",
+        "valor": "802.3af y 802.3at"
+      },
+      {
+        "nombre": "Altura (mm)",
+        "valor": "22,3 mm"
+      },
+      {
+        "nombre": "Ancho (mm)",
+        "valor": "17 mm"
+      },
+      {
+        "nombre": "Tipo de conector",
+        "valor": "RJ-45 Hembra (Keystone Jack)"
+      },
+      {
+        "nombre": "Estándares de montaje",
+        "valor": "T568A y T568B"
+      },
+      {
+        "nombre": "Conexión",
+        "valor": "Padrón 110 IDC, 8 posiciones, en bronce fosforoso estañado, paraconductores de 22 hasta 26 AWG"
+      },
+      {
+        "nombre": "Tipo de cable",
+        "valor": "U/UTP Cat.6"
+      },
+      {
+        "nombre": "Certificaciones",
+        "valor": "ETL 6 Channel Verified, ETL Verified, UL Listed E173971"
+      },
+      {
+        "nombre": "Norma",
+        "valor": "ANSI/TIA-568-C.2, ISO/IEC 11801, EN 50173-1, IEC 60603-7, FCC parte 68, NBR 14565, NMX-I-248-NYCE-2008"
+      }
+    ]
+  },
+  {
+    "nombre": "ROLLO UTP 4 PARES CAT6 24 AWG CM, E2 305 MTS",
+    "unidad": "ROLLO",
+    "categoria": "Cableado estructurado",
+    "descripcion": "",
+    "activo": true,
+    "especificaciones": [
+      {
+        "nombre": "Marca",
+        "valor": "El proveedor deberá especificar la marca verificable en el sitio del fabricante"
+      },
+      {
+        "nombre": "Descripción",
+        "valor": "Cable para transmisión de datos Categoría 6 sin blindaje, para uso interno"
+      },
+      {
+        "nombre": "Aplicación",
+        "valor": "Soporta ATM -155 (UTP); AF-PHY-OO15.000; AF-PHY-0018.000; TP-PMD; ANSI X3T9.5; GIGABITETHERNET; IEEE 802.3ab 1000 BASE T; IEEE 802.3an 2006; 100BASE-TX; IEEE 802.3u;100BASE-T4; IEEE 802.3u; 100vg-AnyLAN; IEEE802.12; 10BASE-T; IEEE802.3; TOKEN RING;IEEE802.5; 3X-AS400; IBM; TSB-155; ATM LAN 1.2 Gbit/s; AF-PHY 0162.000 2001."
+      },
+      {
+        "nombre": "Categoría",
+        "valor": "CAT.6"
+      },
+      {
+        "nombre": "Compatibilidad",
+        "valor": "Toda la línea FCS Conectores y patch panels CAT.6"
+      },
+      {
+        "nombre": "Conductor",
+        "valor": "Hilo Sólido de cobre desnudo 100% cobre"
+      },
+      {
+        "nombre": "Calibre del Conductor",
+        "valor": "24 awg"
+      },
+      {
+        "nombre": "Aislamiento",
+        "valor": "Polietileno de alta densidad con diámetro nominal del conductor aislado 1,0mm"
+      },
+      {
+        "nombre": "Diámetro nominal",
+        "valor": "Mínimamente 6,0 mm"
+      },
+      {
+        "nombre": "Longitud (metros)",
+        "valor": "305 mts"
+      },
+      {
+        "nombre": "Grado de Flamabilidad",
+        "valor": "LSZH-1 - IEC 60332-1"
+      },
+      {
+        "nombre": "soporte a POE",
+        "valor": "PoE (IEEE 802.3af) - Sin restricción de bundlePoE+ (IEEE 802.at) - Sin restricción de bundlePoE++ (IEEE 802.bt) - 192 bundles4PPoE (IEEE 802.bt) - 128 bundles"
+      },
+      {
+        "nombre": "Certificaciones",
+        "valor": "ETL Verified, ETL 4 conexiones, ETL 6 conexiones, Anatel, Etiqueta Ecológica ABNT"
+      },
+      {
+        "nombre": "Norma",
+        "valor": "ANSI/TIA-568.2-D, ISO/IEC 11801, IEC 61156-5, IEC 60332-1, IEC 60754-2, IEC 61034-1 / 2, UL 444, ABNT NBR 14703, ABNT NBR 14705"
+      }
+    ]
+  },
+  {
+    "nombre": "CABLE HDMI 1 MTS",
+    "unidad": "PZA",
+    "categoria": "Cableado estructurado",
+    "descripcion": "",
+    "activo": true,
+    "especificaciones": [
+      {
+        "nombre": "Longitud",
+        "valor": "Mayor o igual a 1 metros"
+      },
+      {
+        "nombre": "Ancho de banda",
+        "valor": "10.2 Gbits / s"
+      },
+      {
+        "nombre": "Resolución de video soportada",
+        "valor": "480i, 480p, 720p, 1080i, 1080p"
+      }
+    ]
+  },
+  {
+    "nombre": "CABLE HDMI 5 MTS",
+    "unidad": "PZA",
+    "categoria": "Cableado estructurado",
+    "descripcion": "",
+    "activo": true,
+    "especificaciones": [
+      {
+        "nombre": "Longitud",
+        "valor": "Mayor o igual a 5 metros"
+      },
+      {
+        "nombre": "Ancho de banda",
+        "valor": "10.2 Gbits / s"
+      },
+      {
+        "nombre": "Resolución de video soportada",
+        "valor": "480i, 480p, 720p, 1080i, 1080p"
+      }
+    ]
+  },
+  {
+    "nombre": "CABLE CANAL 30X30 CON ADHESIVO",
+    "unidad": "PZA",
+    "categoria": "Canalización e instalación",
+    "descripcion": "",
+    "activo": true,
+    "especificaciones": [
+      {
+        "nombre": "Descripción",
+        "valor": "Canaleta compuesta de base y tampa 30x30 mm"
+      },
+      {
+        "nombre": "Material",
+        "valor": "ABS"
+      },
+      {
+        "nombre": "Color",
+        "valor": "Blanco"
+      },
+      {
+        "nombre": "Adhesivo",
+        "valor": "Si"
+      }
+    ]
+  },
+  {
+    "nombre": "CABLE CANAL 20X10 CON ADHESIVO",
+    "unidad": "PZA",
+    "categoria": "Canalización e instalación",
+    "descripcion": "",
+    "activo": true,
+    "especificaciones": [
+      {
+        "nombre": "Descripción",
+        "valor": "Canaleta compuesta de base y tampa 20x10 mm"
+      },
+      {
+        "nombre": "Material",
+        "valor": "ABS"
+      },
+      {
+        "nombre": "Color",
+        "valor": "Blanco"
+      },
+      {
+        "nombre": "Adhesivo",
+        "valor": "Si"
+      }
+    ]
+  },
+  {
+    "nombre": "ALAMBRE GALVANIZADO CALIBRE 18",
+    "unidad": "KG",
+    "categoria": "Canalización e instalación",
+    "descripcion": "",
+    "activo": true,
+    "especificaciones": [
+      {
+        "nombre": "Descripción",
+        "valor": "Alambre de acero galvanizado para uso ferretero, agrícola, manualidad, etc."
+      },
+      {
+        "nombre": "Material",
+        "valor": "Acero galvanizado"
+      },
+      {
+        "nombre": "Calibre",
+        "valor": "18"
+      },
+      {
+        "nombre": "Norma",
+        "valor": "ASTM -A-510, ASTM-A-641"
+      },
+      {
+        "nombre": "Color",
+        "valor": "Metálico"
+      }
+    ]
+  },
+  {
+    "nombre": "ESPUMA EXPANSIVA",
+    "unidad": "PZA",
+    "categoria": "Canalización e instalación",
+    "descripcion": "",
+    "activo": true,
+    "especificaciones": [
+      {
+        "nombre": "Material",
+        "valor": "Placa plástica PVC"
+      },
+      {
+        "nombre": "Consistencia",
+        "valor": "espuma"
+      },
+      {
+        "nombre": "Presentación",
+        "valor": "Lata"
+      },
+      {
+        "nombre": "Interior/exterior",
+        "valor": "Ambos"
+      }
+    ]
+  },
+  {
+    "nombre": "PRECINTOS PLÁSTICOS PAQUETE (100 UND.) 10CM",
+    "unidad": "PZA",
+    "categoria": "Canalización e instalación",
+    "descripcion": "",
+    "activo": true,
+    "especificaciones": [
+      {
+        "nombre": "Descripción",
+        "valor": "Bolsa de 100 unidades"
+      },
+      {
+        "nombre": "Tamaño",
+        "valor": "Aprox. 3,6x100 mm"
+      },
+      {
+        "nombre": "Material",
+        "valor": "Nylon"
+      }
+    ]
+  },
+  {
+    "nombre": "CINTA DE DOBLE IMPACTO",
+    "unidad": "PZA",
+    "categoria": "Canalización e instalación",
+    "descripcion": "",
+    "activo": true,
+    "especificaciones": [
+      {
+        "nombre": "Tipo de Adhesivo",
+        "valor": "Acrílico"
+      },
+      {
+        "nombre": "Tipo de Espuma",
+        "valor": "Adaptable"
+      },
+      {
+        "nombre": "Longitud total (Métrica)",
+        "valor": "5 m"
+      },
+      {
+        "nombre": "Ancho Total (Métrico)",
+        "valor": "19 mm"
+      }
+    ]
+  },
+  {
+    "nombre": "TORNILLO TIPO ARMELLA #8",
+    "unidad": "PZA",
+    "categoria": "Canalización e instalación",
+    "descripcion": "",
+    "activo": true,
+    "especificaciones": [
+      {
+        "nombre": "Ancho (mm)",
+        "valor": "4 mm"
+      },
+      {
+        "nombre": "Largo(mm)",
+        "valor": "29 mm"
+      },
+      {
+        "nombre": "Diámetro interno",
+        "valor": "13 mm"
+      },
+      {
+        "nombre": "Espesor",
+        "valor": "2 mm"
+      },
+      {
+        "nombre": "Color",
+        "valor": "Plata"
+      },
+      {
+        "nombre": "Tipo de cabezal",
+        "valor": "Cerrado"
+      },
+      {
+        "nombre": "Material del cuerpo del producto",
+        "valor": "Acero"
+      }
+    ]
+  },
+  {
+    "nombre": "TORNILLO Y TUERCA HEXAGONAL M6 PARA RACK",
+    "unidad": "PZA",
+    "categoria": "Canalización e instalación",
+    "descripcion": "",
+    "activo": true,
+    "especificaciones": [
+      {
+        "nombre": "Medidas",
+        "valor": "11x10x5 mm"
+      },
+      {
+        "nombre": "Material",
+        "valor": "Galvanizado"
+      }
+    ]
+  },
+  {
+    "nombre": "RAMPLUS #8 PARA LADRILLO HUECO",
+    "unidad": "PZA",
+    "categoria": "Canalización e instalación",
+    "descripcion": "",
+    "activo": true,
+    "especificaciones": [
+      {
+        "nombre": "Especificaciones",
+        "valor": "Plástico NYLON"
+      },
+      {
+        "nombre": "Usos",
+        "valor": "Para sujeciones en ladrillo hueco"
+      },
+      {
+        "nombre": "Medidas",
+        "valor": "#8"
+      }
+    ]
+  },
+  {
+    "nombre": "RAMPLUS #8 PARA CONCRETO",
+    "unidad": "PZA",
+    "categoria": "Canalización e instalación",
+    "descripcion": "",
+    "activo": true,
+    "especificaciones": [
+      {
+        "nombre": "Especificaciones",
+        "valor": "Plástico NYLON"
+      },
+      {
+        "nombre": "Usos",
+        "valor": "Para sujeciones en concreto"
+      },
+      {
+        "nombre": "Medidas",
+        "valor": "#8"
+      }
+    ]
+  },
+  {
+    "nombre": "TORNILLO TIRAFONDO HEXAGONAL ZINCADO 1/4 X 2,5\"",
+    "unidad": "PZA",
+    "categoria": "Canalización e instalación",
+    "descripcion": "",
+    "activo": true,
+    "especificaciones": [
+      {
+        "nombre": "Medidas",
+        "valor": "1/4x2.5”"
+      },
+      {
+        "nombre": "Material",
+        "valor": "Hierro"
+      }
+    ]
+  },
+  {
+    "nombre": "BROCA PARA METAL #8",
+    "unidad": "PZA",
+    "categoria": "Canalización e instalación",
+    "descripcion": "",
+    "activo": true,
+    "especificaciones": [
+      {
+        "nombre": "Medidas",
+        "valor": "15 cm x 8 mm"
+      },
+      {
+        "nombre": "Material",
+        "valor": "Acero rápido (HSS)"
+      }
+    ]
+  },
+  {
+    "nombre": "BROCAS PARA CONCRETO SDS #8",
+    "unidad": "PZA",
+    "categoria": "Canalización e instalación",
+    "descripcion": "",
+    "activo": true,
+    "especificaciones": [
+      {
+        "nombre": "Medidas",
+        "valor": "15 cm x 8 mm"
+      },
+      {
+        "nombre": "Material",
+        "valor": "Acero laminado con punta de tungsteno"
+      }
+    ]
+  },
+  {
+    "nombre": "CAJA METÁLICA 30X30X25 APROX.",
+    "unidad": "PZA",
+    "categoria": "Canalización e instalación",
+    "descripcion": "",
+    "activo": true,
+    "especificaciones": [
+      {
+        "nombre": "Medidas",
+        "valor": "Aprox. 30x30x25 cm"
+      },
+      {
+        "nombre": "Tipo",
+        "valor": "Hermético"
+      },
+      {
+        "nombre": "Con cerradura o chapa",
+        "valor": "Si"
+      },
+      {
+        "nombre": "Material",
+        "valor": "Metalico"
+      }
+    ]
+  },
+  {
+    "nombre": "TORNILLO AUTOPERFORANTE T1 PUNTA DE BROCA CABEZA PLANA",
+    "unidad": "PZA",
+    "categoria": "Canalización e instalación",
+    "descripcion": "",
+    "activo": true,
+    "especificaciones": [
+      {
+        "nombre": "Medidas",
+        "valor": "Aprox. 4.2x13 mm"
+      },
+      {
+        "nombre": "Tipo",
+        "valor": "Autoperforante"
+      },
+      {
+        "nombre": "Material",
+        "valor": "Metalico"
+      }
+    ]
+  },
+  {
+    "nombre": "TOMA CORRIENTE NEMA 5-15R 15A 220V CON FACE PLATE Y TIERRA",
+    "unidad": "PZA",
+    "categoria": "Energía eléctrica",
+    "descripcion": "",
+    "activo": true,
+    "especificaciones": [
+      {
+        "nombre": "Amperaje",
+        "valor": "15 A"
+      },
+      {
+        "nombre": "Cable",
+        "valor": "3 conductores"
+      },
+      {
+        "nombre": "Color",
+        "valor": "crema"
+      },
+      {
+        "nombre": "Conexión a tierra",
+        "valor": "si"
+      },
+      {
+        "nombre": "Material básico",
+        "valor": "Termoplástico"
+      },
+      {
+        "nombre": "NEMA",
+        "valor": "5-15 R"
+      },
+      {
+        "nombre": "Norma y Certificación",
+        "valor": "UL/CSA"
+      },
+      {
+        "nombre": "Polo",
+        "valor": "2"
+      },
+      {
+        "nombre": "Tipo de hoja",
+        "valor": "Hoja recta"
+      },
+      {
+        "nombre": "Voltaje",
+        "valor": "220 V"
+      },
+      {
+        "nombre": "Material de la Superficie",
+        "valor": "Termoplástico"
+      }
+    ]
+  },
+  {
+    "nombre": "CABLE UNIPOLAR 12 AWG PARA CIRCUITO DE TOMAS ELÉCTRICAS",
+    "unidad": "M",
+    "categoria": "Energía eléctrica",
+    "descripcion": "",
+    "activo": true,
+    "especificaciones": [
+      {
+        "nombre": "Descripción",
+        "valor": "Conductor multifilar de cobre sólido."
+      },
+      {
+        "nombre": "Calibre del Conductor",
+        "valor": "12 awg"
+      },
+      {
+        "nombre": "Aislamiento",
+        "valor": "ASTM D 2219 Especificación de aislamiento de PVC para alambres y cables (temperatura 75ºC)"
+      },
+      {
+        "nombre": "Color",
+        "valor": "negro, azul, amarillo, blanco, verde"
+      },
+      {
+        "nombre": "Estructura",
+        "valor": "multifilar"
+      }
+    ]
+  },
+  {
+    "nombre": "REGLETA DE 6 TOMAS UNIVERSALES",
+    "unidad": "PZA",
+    "categoria": "Energía eléctrica",
+    "descripcion": "",
+    "activo": true,
+    "especificaciones": [
+      {
+        "nombre": "Material",
+        "valor": "Placa plástico PVC"
+      },
+      {
+        "nombre": "Cantidad de posiciones",
+        "valor": "6"
+      },
+      {
+        "nombre": "Tipo de entrada",
+        "valor": "NEMA 5-15P."
+      },
+      {
+        "nombre": "Color",
+        "valor": "Negro"
+      },
+      {
+        "nombre": "Dimensiones",
+        "valor": "Aprox. 23.5x4x2.5 cm"
+      }
+    ]
+  },
+  {
+    "nombre": "VIDEO BALUM",
+    "unidad": "PZA",
+    "categoria": "Multimedia",
+    "descripcion": "",
+    "activo": true,
+    "especificaciones": [
+      {
+        "nombre": "Marca",
+        "valor": "El proveedor deberá especificar"
+      },
+      {
+        "nombre": "Descripción",
+        "valor": "Balum HDMI por cable UTP"
+      },
+      {
+        "nombre": "Distancia de transmisión",
+        "valor": "30 metros (mínimamente)"
+      },
+      {
+        "nombre": "Componentes",
+        "valor": "Transmisor y Receptor"
+      },
+      {
+        "nombre": "Puerto Ethernet",
+        "valor": "RJ45"
+      },
+      {
+        "nombre": "Puerto de Video",
+        "valor": "HDMI"
+      },
+      {
+        "nombre": "Aplicaciones",
+        "valor": "Equipo para transmisión de video de alta calidad a través de cable UTP"
+      }
+    ]
+  },
+  {
+    "nombre": "BANDEJA ÓPTICA ODF 24 H DESCARGADO",
+    "unidad": "PZA",
+    "categoria": "Fibra óptica",
+    "descripcion": "",
+    "activo": true,
+    "especificaciones": [
+      {
+        "nombre": "Marca",
+        "valor": "El proveedor deberá especificar la marca verificable en el sitio del fabricante"
+      },
+      {
+        "nombre": "Altura",
+        "valor": "1U"
+      },
+      {
+        "nombre": "Norma",
+        "valor": "ANSI / EIA RS-310-D, IEC297-2, DIN41494; PARTE1, DIN41494; PARTE7, estándar ETSI"
+      },
+      {
+        "nombre": "Montaje",
+        "valor": "En marco de 19 pulg."
+      },
+      {
+        "nombre": "Puertos de carga",
+        "valor": "24"
+      },
+      {
+        "nombre": "Conector",
+        "valor": "SC/LC"
+      },
+      {
+        "nombre": "Material principal",
+        "valor": "Acero laminado en frío SPCC"
+      },
+      {
+        "nombre": "Color",
+        "valor": "Negro"
+      }
+    ]
+  },
+  {
+    "nombre": "FIBRA ÓPTICA ADSS DE 24 HILOS SM.",
+    "unidad": "M",
+    "categoria": "Fibra óptica",
+    "descripcion": "",
+    "activo": true,
+    "especificaciones": [
+      {
+        "nombre": "Cantidad de hilos",
+        "valor": "Mínimamente 24"
+      },
+      {
+        "nombre": "Norma",
+        "valor": "ITU-T G 657, G657A1"
+      },
+      {
+        "nombre": "Tipo",
+        "valor": "ADSS"
+      },
+      {
+        "nombre": "Certificaciones",
+        "valor": "ANATEL"
+      },
+      {
+        "nombre": "Fibra Óptica",
+        "valor": "BLI-A/B - Monomodo con baja sensibilidad a curvaturas."
+      }
+    ]
+  },
+  {
+    "nombre": "CABLE ÓPTICO DROP DE 2 HILOS SM",
+    "unidad": "M",
+    "categoria": "Fibra óptica",
+    "descripcion": "",
+    "activo": true,
+    "especificaciones": [
+      {
+        "nombre": "Material del mensajero",
+        "valor": "Acero"
+      },
+      {
+        "nombre": "Cantidad de hilos",
+        "valor": "Mínimamente 2"
+      },
+      {
+        "nombre": "Color",
+        "valor": "Negro"
+      },
+      {
+        "nombre": "Mode",
+        "valor": "Monomodo G657A1 u superior"
+      }
+    ]
+  },
+  {
+    "nombre": "CAJA DE TERMINACIÓN DE FIBRA ÓPTICA TWO CORE MINI FTB",
+    "unidad": "PZA",
+    "categoria": "Fibra óptica",
+    "descripcion": "",
+    "activo": true,
+    "especificaciones": [
+      {
+        "nombre": "Instalación",
+        "valor": "Montaje en pared o poste"
+      },
+      {
+        "nombre": "Capacidad del adaptador",
+        "valor": "4/6 adaptadores simplex SC / FC o adaptadores dúplex LC"
+      },
+      {
+        "nombre": "Material",
+        "valor": "ABS Y PC"
+      },
+      {
+        "nombre": "Nivel de Protección",
+        "valor": "IP65"
+      }
+    ]
+  },
+  {
+    "nombre": "PIGTAIL LC /UPC SM (MONOMODO)",
+    "unidad": "PZA",
+    "categoria": "Fibra óptica",
+    "descripcion": "",
+    "activo": true,
+    "especificaciones": [
+      {
+        "nombre": "Longitud mínima",
+        "valor": "1 metro"
+      },
+      {
+        "nombre": "Tipo",
+        "valor": "LC-UPC Mono modo"
+      }
+    ]
+  },
+  {
+    "nombre": "ACOPLADOR LC MONO MODO DÚPLEX",
+    "unidad": "PZA",
+    "categoria": "Fibra óptica",
+    "descripcion": "",
+    "activo": true,
+    "especificaciones": [
+      {
+        "nombre": "Marca y modelo",
+        "valor": "El proveedor deberá especificar la marca y modelo verificable en el sitio del fabricante"
+      },
+      {
+        "nombre": "Compatibilidad",
+        "valor": "DUAL LC-UPC"
+      }
+    ]
+  },
+  {
+    "nombre": "PATCH CORD DE FIBRA ÓPTICA DUAL LC/UPC-LC/UPC MONOMODO DUPLEX",
+    "unidad": "PZA",
+    "categoria": "Fibra óptica",
+    "descripcion": "",
+    "activo": true,
+    "especificaciones": [
+      {
+        "nombre": "Modo",
+        "valor": "SM Single Mode"
+      },
+      {
+        "nombre": "Longitud",
+        "valor": "Mínimo 2 metros"
+      },
+      {
+        "nombre": "Tipo",
+        "valor": "LC/UPC-LC/UPC"
+      }
+    ]
+  },
+  {
+    "nombre": "TERMOCONTRAIBLE DE 60MM",
+    "unidad": "PZA",
+    "categoria": "Fibra óptica",
+    "descripcion": "",
+    "activo": true,
+    "especificaciones": [
+      {
+        "nombre": "Aplicación",
+        "valor": "MANGUITOS TERMOCONTRAIBLES DE 4.00 MM * 60.00MM*FUNDA ENCOGIBLE"
+      },
+      {
+        "nombre": "Longitud",
+        "valor": "Mínimamente 60mm"
+      }
+    ]
+  },
+  {
+    "nombre": "NAP 16 PUERTOS",
+    "unidad": "PZA",
+    "categoria": "Fibra óptica",
+    "descripcion": "",
+    "activo": true,
+    "especificaciones": [
+      {
+        "nombre": "Aplicación",
+        "valor": "Nap de distribución de fibra óptica"
+      },
+      {
+        "nombre": "Salida Drop",
+        "valor": "16 puertos de salida de drop."
+      },
+      {
+        "nombre": "Partes incluidas",
+        "valor": "Bandeja de fusión de fibra óptica"
+      }
+    ]
+  },
+  {
+    "nombre": "PLACA DE OJO DE ALMOHADILLA DE PARED 100X100 MM",
+    "unidad": "PZA",
+    "categoria": "Fibra óptica",
+    "descripcion": "",
+    "activo": true,
+    "especificaciones": [
+      {
+        "nombre": "Ancho plancha (mm)",
+        "valor": "Aprox. 100 mm"
+      },
+      {
+        "nombre": "Altura plancha(mm)",
+        "valor": "Aprox. 100 mm"
+      },
+      {
+        "nombre": "Diámetro de anillo",
+        "valor": "Aprox. 65 mm"
+      },
+      {
+        "nombre": "Color",
+        "valor": "Plata"
+      },
+      {
+        "nombre": "Cantidad de orificios",
+        "valor": "4"
+      },
+      {
+        "nombre": "Material del cuerpo del producto",
+        "valor": "Metal"
+      }
+    ]
+  },
+  {
+    "nombre": "MUFLA DE EMPALME – DOMO DE EMPALME PARA FIBRA ÓPTICA",
+    "unidad": "PZA",
+    "categoria": "Fibra óptica",
+    "descripcion": "",
+    "activo": true,
+    "especificaciones": [
+      {
+        "nombre": "Incluye bandeja de fusión",
+        "valor": "Mínimamente 2"
+      },
+      {
+        "nombre": "Cantidad de hilos",
+        "valor": "Mínimamente 24 hilos"
+      },
+      {
+        "nombre": "Orificios para ventana",
+        "valor": "Mínimamente 1"
+      },
+      {
+        "nombre": "Orificios para terminales",
+        "valor": "Mínimamente 3"
+      },
+      {
+        "nombre": "Tipo",
+        "valor": "Torpedo"
+      }
+    ]
+  }
+]
