@@ -6,18 +6,47 @@ También se corrigieron los avisos de la vista previa: los campos obligatorios p
 
 ## Actualizar desde el repositorio
 
-En la computadora que aloja el sistema, detenga los servicios de la API y del frontend. Desde PowerShell, en la raíz de la instalación:
+En la computadora que aloja el sistema, detenga la API y el frontend antes de instalar dependencias. Si están en ventanas abiertas, pulse `Ctrl+C` en cada consola que ejecuta `npm run dev`, `npm start`, `ng serve` o `npm run watch`. Si funcionan como servicios de Windows, abra `services.msc` y detenga los servicios de estas dos aplicaciones. Si utiliza un administrador como PM2, deténgalas desde ese administrador para evitar que se reinicien durante la actualización.
+
+Desde PowerShell, en la raíz de la instalación, ejecute los comandos por separado. Si alguno falla, resuelva ese error antes de continuar:
 
 ```powershell
 cd C:\informes-umss
 git pull --ff-only origin main
-npm ci --prefix backend
-npm ci --prefix frontend
+npm ci --prefix backend --include=dev
+npm ci --prefix frontend --include=dev
 npm run build --prefix backend
 npm run build --prefix frontend
 ```
 
 Inicie de nuevo los servicios y recargue la página. Caddy conserva su configuración actual. Los informes se deben descargar nuevamente para obtener el formato actualizado.
+
+`--include=dev` instala también TypeScript, Angular CLI y el builder, necesarios para compilar aunque el entorno tenga `NODE_ENV=production`. Consulte la [documentación de npm ci](https://docs.npmjs.com/cli/commands/npm-ci/).
+
+## Windows: errores EPERM o EBUSY al instalar
+
+Si `npm ci` falla al borrar `esbuild.exe` o la carpeta `sass-embedded-win32-x64`, lo más probable es que un proceso conserve archivos abiertos. Primero detenga la API, el frontend y sus procesos de desarrollo como se indica arriba. `npm ci` limpia `node_modules` antes de reinstalar; una interrupción puede dejar dependencias incompletas. Los errores posteriores de `tsc` o `@angular/build:application` se resuelven al completar la instalación.
+
+En **CMD**, pegue este bloque completo. La cadena se detiene si falla cualquiera de los pasos:
+
+```bat
+cd /d C:\informes-umss && ^
+npm ci --prefix backend --include=dev && ^
+npm ci --prefix frontend --include=dev && ^
+npm run build --prefix backend && ^
+npm run build --prefix frontend
+```
+
+Si todavía aparece un bloqueo, cierre el editor que tenga abierto el proyecto y compruebe que los servicios no se hayan reiniciado. Para identificar procesos nativos que pueden seguir abiertos, ejecute en CMD:
+
+```bat
+tasklist /FI "IMAGENAME eq esbuild.exe"
+tasklist /FI "IMAGENAME eq dart.exe"
+```
+
+Antes de finalizar un proceso, confirme que pertenece a esta instalación. Windows permite finalizar un proceso concreto con `taskkill /PID <PID> /T /F`; sustituya `<PID>` por su identificador. Consulte [tasklist](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/tasklist) y [taskkill](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/taskkill).
+
+Cuando ambas compilaciones terminen correctamente, vuelva a iniciar la API y el frontend y recargue la página con `Ctrl+F5`.
 
 ## Actualizar con el paquete compilado
 
