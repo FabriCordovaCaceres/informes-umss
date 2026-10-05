@@ -90,7 +90,7 @@ Para compartir el sistema entre dos computadoras, siga la [guía de despliegue e
 3. **Nuevo informe**: datos generales, áreas, materiales, cantidades, costos y cierre.
 4. Cada material incorpora su ficha automáticamente. **Especificaciones → Editar especificaciones solo para este informe** crea una excepción local. **Restaurar ficha original** recupera la revisión utilizada por ese informe.
 5. Cambiar de paso conserva todos los datos. **Guardar borrador** permite cerrar y continuar después. Se impide abandonar el editor con cambios sin guardar y se ofrece descartarlos explícitamente. Al recargar, el navegador avisa si quedan cambios; no hay autoguardado.
-6. Revisar la hoja A4, **Validar y finalizar** y descargar **PDF** o **Word**. También se pueden exportar borradores completos, marcados como BORRADOR.
+6. Revisar el informe en papel Carta, **Validar y finalizar** y descargar **PDF** o **Word**. Los campos faltantes, las validaciones fallidas y los errores de guardado aparecen encima de los botones de la vista previa. También se pueden exportar borradores completos, marcados como BORRADOR.
 7. Consultar historial o duplicar. Un informe finalizado no se edita ni se elimina; duplicarlo crea un borrador con número nuevo y fecha actual.
 
 Las tablas del panel son datos reales de PostgreSQL; no hay informes de demostración precargados. En una base nueva el seed reserva el número 17/2026 del documento de referencia, por lo que el primer informe nuevo será el 18/2026; no crea un informe ficticio. Configure `INITIAL_GESTION` y `INITIAL_LAST_NUMERO` antes del primer seed según la secuencia real del departamento. Para comenzar en 1 en 2026, use `INITIAL_LAST_NUMERO=0`. Cada gestión posterior sin configuración previa comienza en 1. El Word de referencia sirve también como fuente del catálogo. La numeración se reserva dentro de una transacción al guardar; la estimación visible puede variar si otro usuario guarda antes. Eliminar un borrador no reutiliza su número. La fecha de un informe guardado debe permanecer dentro de su gestión.
@@ -114,7 +114,7 @@ Estos comandos actualizan los JSON de fuente y `database/materiales.json`; no al
 - `frontend/src/app/core`: modelos, HttpClient, sesiones, guards e interceptor.
 - `frontend/src/app/layout`: sidebar y encabezado institucional reutilizables.
 - `frontend/src/app/features`: login, panel/listado, editor de informes, catálogo, usuarios y plantillas.
-- `frontend/src/app/shared/components`: iconos SVG locales y documento A4.
+- `frontend/src/app/shared/components`: iconos SVG locales y vista previa del documento institucional.
 - `backend/src/routes`, `controllers`, `services`, `repositories`: API, reglas de negocio, exportación y SQL parametrizado.
 - `backend/src/middleware`: sesión, permisos, validación y errores.
 - `database/001_initial.sql` y `database/002_force_password_change.sql`: esquema inicial y cambio obligatorio de contraseña. Los scripts `extract_reference.py`, `extract_medicina.py` y `merge_catalog.py` generan el catálogo desde los dos Word institucionales.
@@ -129,7 +129,7 @@ Las cuentas con contraseña temporal solo pueden consultar su sesión, cambiar l
 
 Se conserva Angular SSR y su servidor. El login se renderiza en servidor; las rutas privadas se renderizan en cliente porque su sesión reside en `sessionStorage`. No se prerenderizan datos privados ni rutas con parámetros. `angular.json` permite los hosts locales `localhost` y `127.0.0.1` para SSR; en la intranet se añade el host real con `NG_ALLOWED_HOSTS`.
 
-PDF usa [PDFKit](https://pdfkit.org/docs/getting_started.html), sin navegador instalado en el servidor. Word usa [docx](https://docx.js.org/), con tablas editables, encabezado, pie `pág. X` y saltos de página. Ambos son A4. La vista web reproduce contenido y formato; la paginación definitiva depende del motor PDF o del procesador Word y no será idéntica entre formatos.
+PDF usa [PDFKit](https://pdfkit.org/docs/getting_started.html), sin navegador instalado en el servidor. Word usa [docx](https://docx.js.org/), con tablas editables y pie `pág. X`. Ambos comparten la estructura del Word institucional de Derecho: papel Carta (21,59 × 27,94 cm), márgenes laterales de 3 cm y Times New Roman de 10 puntos en el cuerpo. El pedido reúne universidad, área, fecha, destino, uso y materiales en una tabla con celdas combinadas. Las fichas técnicas continúan según el espacio disponible, con encabezados de tabla repetidos cuando pasan de página. La paginación definitiva depende del motor PDF o del procesador Word. Consulte la [actualización del formato en un servidor existente](actualizar-formato-informes.md).
 
 ## API
 
@@ -145,7 +145,7 @@ Las rutas privadas requieren `Authorization: Bearer <token>`.
 | GET / PUT / DELETE | `/api/informes/:id`                               | Consultar / guardar / eliminar borrador           |
 | GET                | `/api/informes/siguiente?gestion=2026`            | Número estimado                                   |
 | POST               | `/api/informes/:id/duplicar`                      | Nuevo borrador                                    |
-| GET                | `/api/informes/:id/preview`                       | Modelo completo para vista A4                     |
+| GET                | `/api/informes/:id/preview`                       | Modelo completo para vista institucional          |
 | GET                | `/api/informes/:id/pdf`, `/api/informes/:id/docx` | Exportar                                          |
 | GET / POST         | `/api/materiales`                                 | Catálogo / alta                                   |
 | GET / PUT          | `/api/materiales/:id`                             | Consulta / nueva revisión, incluida desactivación |
@@ -175,7 +175,7 @@ INTEGRATION_TEST=1 TEST_API_URL=http://localhost:3000/api node src/utils/integra
 
 La prueba crea cuentas e informes, verifica permisos, versiones, concurrencia, cambio de gestión, duplicados, fichas por área, exportación e historial. Deja un informe finalizado y cuentas de prueba; no la ejecute sobre datos de trabajo. Exporta los archivos de inspección en `/tmp/umss-exports`.
 
-La suite automática contiene 7 pruebas de Angular y 5 del backend. GitHub Actions ejecuta ambas suites y las compilaciones en cada push y pull request. La prueba integral se ejecuta por separado contra una base desechable. Los componentes no requieren CDN ni fuentes remotas.
+La suite automática contiene 10 pruebas de Angular y 9 del backend. GitHub Actions ejecuta ambas suites y las compilaciones en cada push y pull request. La prueba integral se ejecuta por separado contra una base desechable. Los componentes no requieren CDN ni fuentes remotas.
 
 ## Operación y alcance
 

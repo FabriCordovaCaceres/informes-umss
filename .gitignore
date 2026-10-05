@@ -24,3 +24,4 @@ database/*.sql.gz
 # Documentos institucionales de origen: contienen datos personales
 docs/*.docx
 docs/*.pdf
+docs/actualizacion-*.zip

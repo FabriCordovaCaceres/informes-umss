@@ -20,7 +20,7 @@ Pensada para una oficina: una computadora aloja la aplicación y PostgreSQL, y l
 | Informes | Editor por pasos, borradores, validación, finalización y duplicación. |
 | Materiales | Catálogo de 62 materiales con 346 atributos y fichas técnicas versionadas. |
 | Especificaciones | Personalización por informe sin modificar la ficha original del catálogo. |
-| Documentos | Vista previa A4, exportación PDF y Word con tablas editables. |
+| Documentos | Vista previa Carta, exportación PDF y Word con tablas editables y formato institucional. |
 | Usuarios | Roles de administrador, técnico y jefatura; cambio obligatorio de claves temporales. |
 | Historial | Registro de cambios y control de versión para evitar sobrescribir ediciones simultáneas. |
 
@@ -29,7 +29,7 @@ Pensada para una oficina: una computadora aloja la aplicación y PostgreSQL, y l
 1. Iniciar sesión y cambiar la contraseña temporal.
 2. Crear un informe con sus datos generales y áreas.
 3. Seleccionar materiales, cantidades y especificaciones.
-4. Guardar el borrador, revisar la vista previa y finalizar.
+4. Guardar el borrador, revisar la vista previa y finalizar. Los errores de validación aparecen junto al botón «Validar y finalizar».
 5. Descargar PDF o Word; consultar el historial o duplicar el informe.
 
 ## Arquitectura
@@ -50,7 +50,7 @@ informes-umss/
 ├── frontend/                 # Angular, editor y panel de gestión
 │   ├── src/app/core/          # Sesiones, servicios, modelos y guards
 │   ├── src/app/features/      # Pantallas de cada módulo
-│   ├── src/app/shared/        # Componentes e impresión A4
+│   ├── src/app/shared/        # Componentes e impresión Carta
 │   └── deploy/               # Caddy y guías de intranet/Windows
 ├── backend/src/              # API, reglas de negocio y exportación
 ├── database/                 # Migraciones, catálogo y extracción
@@ -101,6 +101,7 @@ GitHub Actions ejecuta las compilaciones y las suites de pruebas del frontend y 
 - [Instalación, arquitectura, API y operación](docs/DEVELOPMENT.md)
 - [Despliegue en intranet](frontend/deploy/README.md)
 - [Equipo anfitrión con Windows 10](frontend/deploy/windows-10.md)
+- [Actualizar el formato de los informes en el servidor](docs/actualizar-formato-informes.md)
 - [Fuentes y regeneración del catálogo](docs/README.md)
 
 La versión pública utiliza nombres y cuentas de ejemplo. Los Word institucionales originales, las credenciales, los datos de PostgreSQL y sus respaldos están excluidos de Git. El catálogo técnico está incluido para permitir una instalación nueva.
