@@ -80,12 +80,17 @@
 }
 .wizard-footer {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   padding: 22px 0;
   margin-top: 15px;
   gap: 15px;
   border-top: 1px solid #dfe5ed;
+}
+.wizard-footer .wizard-error {
+  flex-basis: 100%;
+  margin: 0;
 }
 .wizard-footer .actions {
   flex-wrap: wrap;

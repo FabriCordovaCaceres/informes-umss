@@ -16,7 +16,7 @@
     </div>
   </div>
 }
-@if (error()) {
+@if (error() && (step() !== 3 || loading())) {
   <div class="message error" role="alert">{{ error() }}</div>
 }
 @if (success()) {
@@ -262,6 +262,11 @@
       }
     }
     <div class="wizard-footer">
+      @if (step() === 3 && error()) {
+        <div id="preview-error" class="message error wizard-error" role="alert">
+          {{ error() }}
+        </div>
+      }
       <button type="submit" class="secondary" [disabled]="busy()">
         {{ busy() ? 'Guardando…' : 'Guardar borrador' }}
       </button>
@@ -276,7 +281,13 @@
             Continuar <app-icon name="arrow" />
           </button>
         } @else {
-          <button type="button" class="primary" (click)="requestFinalize()" [disabled]="busy()">
+          <button
+            type="button"
+            class="primary"
+            (click)="requestFinalize()"
+            [disabled]="busy()"
+            [attr.aria-describedby]="error() ? 'preview-error' : null"
+          >
             <app-icon name="check" /> Validar y finalizar
           </button>
         }

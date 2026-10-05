@@ -1,9 +1,10 @@
 import { TestBed } from '@angular/core/testing';
 import { ActivatedRoute, provideRouter } from '@angular/router';
 import { provideHttpClient } from '@angular/common/http';
-import { of } from 'rxjs';
+import { of, throwError } from 'rxjs';
 import { InformeEditor } from './informe-editor';
 import { InformesService } from '../../core/services/informes.service';
+import { MaterialesService } from '../../core/services/materiales.service';
 import { Material } from '../../core/models/models';
 const cable: Material = {
   id: 1,
@@ -23,7 +24,15 @@ describe('Asistente de informes', () => {
         provideRouter([]),
         provideHttpClient(),
         { provide: ActivatedRoute, useValue: { snapshot: { paramMap: new Map() } } },
-        { provide: InformesService, useValue: { next: () => of({ numero: 1, gestion: 2026 }) } },
+        {
+          provide: InformesService,
+          useValue: {
+            next: () => of({ numero: 1, gestion: 2026 }),
+            defaults: () => of({}),
+            save: vi.fn(() => throwError(() => ({ status: 0 }))),
+          },
+        },
+        { provide: MaterialesService, useValue: { list: () => of([cable]) } },
       ],
     });
     editor = TestBed.runInInjectionContext(() => new InformeEditor());
@@ -74,5 +83,57 @@ describe('Asistente de informes', () => {
     }
     expect(editor.lines(0).length).toBe(1);
     expect(editor.lines(0).at(0).controls.cantidad.value).toBe(6);
+  });
+  it('muestra los campos faltantes junto al botón de finalizar en la vista previa', async () => {
+    await TestBed.compileComponents();
+    const fixture = TestBed.createComponent(InformeEditor);
+    editor = fixture.componentInstance;
+    fixture.detectChanges();
+    editor.go(3);
+    fixture.detectChanges();
+
+    const element: HTMLElement = fixture.nativeElement;
+    const finalize = element.querySelector<HTMLButtonElement>('.wizard-footer .primary')!;
+    finalize.click();
+    fixture.detectChanges();
+
+    const alert = element.querySelector('.wizard-footer [role="alert"]');
+    expect(alert?.textContent).toContain('Complete el remitente (De).');
+    expect(alert?.textContent).toContain('Complete la referencia.');
+    expect(alert?.textContent).toContain('Agregue al menos un material.');
+    expect(finalize.getAttribute('aria-describedby')).toBe(alert?.id);
+    expect(element.querySelectorAll('[role="alert"]').length).toBe(1);
+    expect(element.querySelector('[role="dialog"]')).toBeNull();
+    expect(editor.form.controls.referencia.touched).toBe(true);
+    expect(editor.api.save).not.toHaveBeenCalled();
+  });
+  it('mantiene los errores de guardado junto a los botones al cerrar la confirmación', async () => {
+    await TestBed.compileComponents();
+    const fixture = TestBed.createComponent(InformeEditor);
+    editor = fixture.componentInstance;
+    fixture.detectChanges();
+    editor.form.patchValue({ remitente: 'Técnico', destinatario: 'Jefe', referencia: 'Redes' });
+    editor.addArea();
+    editor.areas.at(0).controls.nombre.setValue('Planta baja');
+    editor.openPicker(0);
+    editor.picker.patchValue({ material_id: 1, cantidad: 4 });
+    editor.addMaterial();
+    editor.go(3);
+    fixture.detectChanges();
+
+    const element: HTMLElement = fixture.nativeElement;
+    element.querySelector<HTMLButtonElement>('.wizard-footer .primary')!.click();
+    fixture.detectChanges();
+    expect(element.querySelector('[role="dialog"]')).not.toBeNull();
+    element.querySelector<HTMLButtonElement>('[role="dialog"] .primary')!.click();
+    fixture.detectChanges();
+
+    expect(element.querySelector('.wizard-footer [role="alert"]')?.textContent).toContain(
+      'No se pudo conectar con el servidor.',
+    );
+    expect(element.querySelectorAll('[role="alert"]').length).toBe(1);
+    expect(element.querySelector('[role="dialog"]')).toBeNull();
+    expect(editor.api.save).toHaveBeenCalledOnce();
+    expect(editor.busy()).toBe(false);
   });
 });
