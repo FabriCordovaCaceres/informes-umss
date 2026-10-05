@@ -1,14 +1,13 @@
 import { Component, input } from '@angular/core';
-import { DatePipe, DecimalPipe } from '@angular/common';
-import { Report } from '../../core/models/models';
+import { DatePipe } from '@angular/common';
+import { Line, Report } from '../../core/models/models';
 @Component({
   selector: 'app-report-preview',
-  imports: [DatePipe, DecimalPipe],
+  imports: [DatePipe],
   template: `@if (report(); as r) {
     <div class="document-stack">
       <article class="paper">
         <header>
-          <small>UNIVERSIDAD MAYOR DE SAN SIMÓN · DTIC</small>
           <h2>INFORME TÉCNICO</h2>
           <h3>{{ r.codigo_completo || 'RD-RDTIC-N° Por asignar' }}</h3>
           @if (r.estado === 'BORRADOR') {
@@ -17,42 +16,71 @@ import { Report } from '../../core/models/models';
         </header>
         <dl>
           <dt>De:</dt>
-          <dd>{{ r.remitente }}<br />{{ r.cargo_remitente }}</dd>
-          <dt>Para:</dt>
-          <dd>{{ r.destinatario }}<br />{{ r.cargo_destinatario }}</dd>
-          <dt>Ref.:</dt>
           <dd>
-            <strong>{{ r.referencia }}</strong>
+            {{ r.remitente }}<br /><strong>{{ r.cargo_remitente }}</strong>
           </dd>
+          <dt>Para:</dt>
+          <dd>
+            {{ r.destinatario }}<br /><strong>{{ r.cargo_destinatario }}</strong>
+          </dd>
+          <dt>Ref.:</dt>
+          <dd>{{ r.referencia }}</dd>
           <dt>Fecha:</dt>
           <dd>Cochabamba, {{ date(r.fecha) }}</dd>
         </dl>
-        <p class="intro">{{ r.introduccion.replaceAll('[NOTA]', r.nota_solicitud) }}</p>
+        <p class="prose">{{ r.introduccion.replaceAll('[NOTA]', r.nota_solicitud) }}</p>
         @for (a of r.areas; track $index) {
           <section>
-            <h3>UNIVERSIDAD MAYOR DE SAN SIMÓN</h3>
-            <h3>PEDIDO DE MATERIALES<br />{{ a.nombre }}</h3>
-            <p>
-              FECHA DE EMISIÓN: {{ r.fecha | date: 'dd/MM/yyyy' : 'UTC' }} · DTIC · COCHABAMBA,
-              BOLIVIA
-            </p>
-            <p><strong>DESTINO:</strong> {{ a.destino }}<br /><strong>USO:</strong> {{ a.uso }}</p>
-            <table>
+            <table class="materials">
+              <colgroup>
+                <col style="width: 5.43%" />
+                <col style="width: 14.14%" />
+                <col style="width: 10.75%" />
+                <col style="width: 28.23%" />
+                <col style="width: 13.96%" />
+                <col style="width: 13.96%" />
+                <col style="width: 13.53%" />
+              </colgroup>
               <thead>
+                <tr class="request-heading">
+                  <th colspan="3" class="institution first">UNIVERSIDAD MAYOR DE SAN SIMON</th>
+                  <th rowspan="3" class="order-title">PEDIDO DE MATERIALES<br />{{ a.nombre }}</th>
+                  <th colspan="3" class="date-heading">FECHA DE EMISION</th>
+                </tr>
                 <tr>
+                  <th colspan="3" class="institution middle">DTIC</th>
+                  <th class="date-heading">DÍA</th>
+                  <th class="date-heading">MES</th>
+                  <th class="date-heading">AÑO</th>
+                </tr>
+                <tr>
+                  <th colspan="3" class="institution last">COCHABAMBA- BOLIVIA</th>
+                  <td class="date-value">{{ r.fecha | date: 'd' : 'UTC' }}</td>
+                  <td class="date-value">{{ r.fecha | date: 'M' : 'UTC' }}</td>
+                  <td class="date-value">{{ r.fecha | date: 'yyyy' : 'UTC' }}</td>
+                </tr>
+                <tr class="destination">
+                  <th colspan="3">DESTINO:</th>
+                  <td colspan="4">{{ a.destino }}</td>
+                </tr>
+                <tr class="usage">
+                  <th colspan="3">USO:</th>
+                  <td colspan="4">{{ a.uso }}</td>
+                </tr>
+                <tr class="column-headings">
                   <th>N°</th>
                   <th>CANTIDAD</th>
                   <th>UNIDAD</th>
-                  <th>DETALLE</th>
+                  <th colspan="4">DETALLE</th>
                 </tr>
               </thead>
               <tbody>
                 @for (m of a.materiales; track $index) {
                   <tr>
-                    <td>{{ $index + 1 }}</td>
-                    <td>{{ m.cantidad }}</td>
-                    <td>{{ m.unidad }}</td>
-                    <td>{{ m.nombre }}</td>
+                    <td class="center">{{ $index + 1 }}</td>
+                    <td class="center">{{ m.cantidad }}</td>
+                    <td class="center">{{ m.unidad }}</td>
+                    <td colspan="4">{{ m.nombre }}</td>
                   </tr>
                 }
               </tbody>
@@ -61,11 +89,15 @@ import { Report } from '../../core/models/models';
         }
         @if (r.costos.length) {
           <section>
-            <h3>COSTO DEL TRABAJO</h3>
-            <table>
+            <table class="costs">
+              <colgroup>
+                <col style="width: 12.13%" />
+                <col style="width: 75%" />
+                <col style="width: 12.87%" />
+              </colgroup>
               <thead>
                 <tr>
-                  <th>N°</th>
+                  <th>ITEM I</th>
                   <th>Descripción</th>
                   <th>Costo Bs.</th>
                 </tr>
@@ -73,70 +105,74 @@ import { Report } from '../../core/models/models';
               <tbody>
                 @for (c of r.costos; track $index) {
                   <tr>
-                    <td>{{ $index + 1 }}</td>
+                    <td class="center">{{ $index + 1 }}</td>
                     <td>{{ c.descripcion }}</td>
-                    <td class="amount">{{ c.monto | number: '1.2-2' }}</td>
+                    <td class="amount">{{ amount(c.monto) }}</td>
                   </tr>
                 }
-                <tr>
-                  <td colspan="2"><strong>TOTAL</strong></td>
-                  <td class="amount">
-                    <strong>{{ total(r) | number: '1.2-2' }}</strong>
-                  </td>
-                </tr>
               </tbody>
             </table>
           </section>
         }
-        <p class="conclusion">{{ r.conclusion }}</p>
-        <p class="signature">{{ r.remitente }}<br />{{ r.cargo_remitente }}</p>
-        <small
-          >C.c. Archivos DTIC<br />
+        <p class="prose">{{ r.conclusion }}</p>
+        <p class="signature">
+          {{ r.remitente }}<br /><strong>{{ r.cargo_remitente }}</strong>
+        </p>
+        <div class="attachments">
+          C.c Archivos DTIC<br />
           @for (a of r.adjuntos; track $index) {
             <span>{{ a }}<br /></span>
           }
-        </small>
-        <footer>Informe técnico · {{ r.codigo_completo || 'Borrador' }}</footer>
-      </article>
-      @for (a of r.areas; track $index) {
-        <article class="paper specifications">
-          <header>
-            <small>UNIVERSIDAD MAYOR DE SAN SIMÓN · DTIC</small>
-            <h2>ESPECIFICACIONES TÉCNICAS<br />{{ a.nombre }}</h2>
-          </header>
-          @for (m of a.materiales; track $index) {
-            <section>
-              <h3>ESPECIFICACIONES TÉCNICAS</h3>
-              <h4>ITEM {{ $index + 1 }}: {{ m.nombre }}</h4>
-              <table>
-                <tbody>
-                  <tr>
-                    <th colspan="2">Datos generales</th>
-                  </tr>
-                  <tr>
-                    <td class="spec-name">Cantidad</td>
-                    <td>{{ m.cantidad }} {{ m.unidad }}</td>
-                  </tr>
-                  <tr>
-                    <th colspan="2">Datos técnicos</th>
-                  </tr>
-                  @for (s of m.especificaciones_override ?? m.especificaciones; track $index) {
+        </div>
+        @for (a of r.areas; track $index) {
+          @if (a.materiales.length) {
+            <h2 class="area-title">ESPECIFICACIONES TÉCNICAS {{ a.nombre }}</h2>
+            @for (m of a.materiales; track $index) {
+              <section>
+                <table class="specifications">
+                  <colgroup>
+                    <col style="width: 28.56%" />
+                    <col style="width: 71.44%" />
+                  </colgroup>
+                  <thead>
                     <tr>
-                      <td class="spec-name">{{ s.nombre }}</td>
-                      <td>{{ s.valor }}</td>
+                      <th colspan="2" class="center">ESPECIFICACIONES TÉCNICAS</th>
                     </tr>
-                  } @empty {
                     <tr>
-                      <td colspan="2">Sin datos técnicos registrados.</td>
+                      <th>ITEM {{ $index + 1 }}:</th>
+                      <th>{{ m.nombre }}</th>
                     </tr>
-                  }
-                </tbody>
-              </table>
-            </section>
+                  </thead>
+                  <tbody>
+                    @for (s of brandSpecs(m); track $index) {
+                      <tr>
+                        <td>{{ s.nombre }}</td>
+                        <td>{{ s.valor }}</td>
+                      </tr>
+                    }
+                    <tr>
+                      <th colspan="2">Datos generales:</th>
+                    </tr>
+                    <tr>
+                      <td>Cantidad</td>
+                      <td>{{ m.cantidad }}</td>
+                    </tr>
+                    <tr>
+                      <th colspan="2">Datos técnicos:</th>
+                    </tr>
+                    @for (s of technicalSpecs(m); track $index) {
+                      <tr>
+                        <td>{{ s.nombre }}</td>
+                        <td>{{ s.valor }}</td>
+                      </tr>
+                    }
+                  </tbody>
+                </table>
+              </section>
+            }
           }
-          <footer>{{ a.nombre }} · {{ r.codigo_completo }}</footer>
-        </article>
-      }
+        }
+      </article>
     </div>
   }`,
   styleUrl: './report-preview.scss',
@@ -150,10 +186,22 @@ export class ReportPreview {
           month: 'long',
           year: 'numeric',
           timeZone: 'UTC',
-        }).format(new Date(value + 'T12:00:00Z'))
+        })
+          .format(new Date(value + 'T12:00:00Z'))
+          .replace(/ de (\d{4})$/, ' del $1')
       : '';
   }
-  total(r: Report) {
-    return r.costos.reduce((s, c) => s + Number(c.monto), 0);
+  amount(value: number) {
+    return Number(value).toFixed(2).replace('.', ',');
+  }
+  brandSpecs(m: Line) {
+    return (m.especificaciones_override ?? m.especificaciones).filter((s) =>
+      /^marca(?: y modelo)?$/i.test(s.nombre.trim()),
+    );
+  }
+  technicalSpecs(m: Line) {
+    return (m.especificaciones_override ?? m.especificaciones).filter(
+      (s) => !/^marca(?: y modelo)?$/i.test(s.nombre.trim()),
+    );
   }
 }

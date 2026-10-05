@@ -42,8 +42,8 @@ import { Icon } from '../../shared/components/icon';
         </div>
       </div>
       <p class="hint">
-        La vista previa muestra el contenido. Los archivos exportados incluyen paginación A4
-        automática.
+        La vista previa muestra el formato del informe. Los archivos Word y PDF usan papel Carta,
+        como el documento institucional.
       </p>
       <app-report-preview [report]="r" />
       <section class="panel section-spacer">
@@ -107,12 +107,10 @@ export class InformeView implements OnInit {
     this.load();
   }
   load() {
-    this.api
-      .get(this.id)
-      .subscribe({
-        next: (r) => this.report.set(r),
-        error: (e) => this.error.set(errorMessage(e)),
-      });
+    this.api.get(this.id).subscribe({
+      next: (r) => this.report.set(r),
+      error: (e) => this.error.set(errorMessage(e)),
+    });
   }
   duplicate() {
     this.busy.set(true);

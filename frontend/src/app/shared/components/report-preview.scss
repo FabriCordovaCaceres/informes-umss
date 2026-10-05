@@ -9,49 +9,38 @@
   border-radius: 5px;
 }
 .paper {
+  box-sizing: border-box;
   background: white;
-  max-width: 210mm;
-  min-height: 297mm;
-  margin: 0 auto 25px;
-  padding: 20mm;
+  width: 215.9mm;
+  min-height: 279.4mm;
+  margin: 0 auto;
+  padding: 20mm 30mm;
   font:
-    11pt/1.45 'Times New Roman',
+    10pt/1.15 'Times New Roman',
     serif;
-  color: #161616;
+  color: #000;
   box-shadow: 0 2px 8px #00000012;
-}
-.paper:last-child {
-  margin-bottom: 0;
 }
 header {
   text-align: center;
+  margin-bottom: 12pt;
 }
-header small {
-  font-size: 8pt;
-  color: #555;
-}
-h2 {
-  font:
-    700 14pt/1.5 'Times New Roman',
-    serif;
-  margin: 22px 0 8px;
-}
+h2,
 h3 {
   font:
-    700 11pt/1.6 'Times New Roman',
+    bold 10pt/1.15 'Times New Roman',
     serif;
+  margin: 0;
   text-align: center;
-  margin: 6px 0;
-}
-h4 {
-  font-size: 11pt;
-  margin: 10px 0;
+  text-decoration: underline;
 }
 dl {
   display: grid;
-  grid-template-columns: 45px 1fr;
-  row-gap: 18px;
-  margin: 32px 0;
+  grid-template-columns: 35.45pt 1fr;
+  row-gap: 12pt;
+  margin: 0 0 12pt;
+  padding-bottom: 6pt;
+  border-bottom: 1.5pt solid #000;
 }
 dt {
   font-weight: bold;
@@ -60,97 +49,143 @@ dd {
   margin: 0;
   white-space: pre-line;
 }
-.intro,
-.conclusion {
+p {
+  font: inherit;
+  margin: 0 0 6pt;
+}
+.prose {
   text-align: justify;
   white-space: pre-line;
+  overflow-wrap: anywhere;
 }
 .paper section {
-  margin: 30px 0;
-  break-inside: avoid;
+  margin: 0 0 12pt;
 }
-p {
-  font-size: 11pt;
-}
-.paper section p {
-  font-size: 10pt;
-}
-table {
+.paper table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
   font:
-    10pt/1.4 'Times New Roman',
+    9pt/1.15 'Times New Roman',
     serif;
-  color: #111;
-  margin: 14px 0;
+  margin: 0;
+  color: #000;
 }
-td,
-th {
-  border: 1px solid #555;
-  padding: 6px 8px;
-  font-size: 10pt;
-  color: #111;
+.paper td,
+.paper th {
+  border: 0.5pt solid #000;
+  padding: 1pt 3.5pt;
+  font: inherit;
+  color: #000;
+  background: white;
+  text-align: left;
   letter-spacing: 0;
   white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  vertical-align: middle;
 }
-th {
-  background: #f4f4f4;
-  text-align: left;
+.paper th {
   font-weight: bold;
 }
-tbody tr:last-child td {
-  border-bottom: 1px solid #555;
+.paper .materials td,
+.paper .materials th {
+  border-width: 1pt;
 }
-.signature {
-  margin: 45px 0 25px;
+.paper .request-heading {
+  height: 69.75pt;
+}
+.paper .institution,
+.paper .date-heading,
+.paper .date-value {
+  font-size: 8pt;
   text-align: center;
 }
-.amount {
-  text-align: right;
-  white-space: nowrap;
+.paper .institution.first {
+  border-bottom: 0;
 }
-small {
+.paper .institution.middle {
+  border-top: 0;
+  border-bottom: 0;
+}
+.paper .institution.last {
+  border-top: 0;
+}
+.paper .order-title {
+  font-size: 16pt;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  overflow-wrap: normal;
+}
+.paper .destination td,
+.paper .destination th {
+  border-bottom: 0;
+}
+.paper .usage td,
+.paper .usage th {
+  border-top: 0;
+}
+.paper .column-headings th,
+.paper .costs thead th,
+.paper .center {
+  text-align: center;
+}
+.paper .specifications {
+  font-size: 10pt;
+}
+.signature {
+  margin: 18pt 0 12pt;
+  font-size: 11pt;
+  text-align: left;
+}
+.attachments {
   font-size: 9pt;
+  font-style: italic;
+  white-space: pre-line;
 }
-.spec-name {
-  width: 30%;
+.area-title {
+  font-size: 14pt;
+  font-style: italic;
+  text-transform: uppercase;
+  margin: 18pt 0 12pt;
+  break-after: avoid;
+}
+.paper .amount {
+  text-align: right;
 }
 .draft-mark {
   display: inline-block;
-  font:
-    9pt Arial,
-    sans-serif;
-  letter-spacing: 2px;
-  color: #999;
-  margin-top: 10px;
-}
-footer {
-  margin-top: 35px;
-  text-align: right;
-  border-top: 1px solid #ddd;
-  padding-top: 10px;
-  font-size: 9pt;
-  color: #555;
+  font-size: 10pt;
+  font-weight: bold;
+  margin-top: 6pt;
 }
 @media (max-width: 750px) {
-  .paper {
-    padding: 25px;
-    min-width: 570px;
-  }
   .document-stack {
     padding: 15px;
   }
 }
 @media print {
+  @page {
+    size: letter;
+    margin: 20mm 30mm;
+  }
   .document-stack {
     padding: 0;
     background: white;
     border: 0;
   }
   .paper {
+    width: auto;
+    min-height: auto;
+    padding: 0;
     box-shadow: none;
     margin: 0;
-    break-after: page;
   }
-  .paper:last-child {
-    break-after: auto;
+  .paper thead {
+    display: table-header-group;
+  }
+  .paper .materials tr,
+  .paper .costs tr {
+    break-inside: avoid;
   }
 }
